@@ -1,0 +1,44 @@
+# Build directories
+build/
+cmake-build-*/
+*.cmake
+
+# Compiled binaries and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+*.out
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Qt generated files (except those we need)
+ui_*.h
+moc_*.cpp
+
+# Testing
+coverage/
+*.gcda
+*.gcno
+
+# Package manager
+.cache/

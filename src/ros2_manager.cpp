@@ -290,7 +290,8 @@ std::vector<TopicInfo> ROS2Manager::discover_topics_() {
         std::cerr << "[ROS2Manager] Starting topic discovery..." << std::endl;
         
         // Use ros2 topic list command with stderr suppressed
-        FILE* pipe = popen("ros2 topic list -t 2>/dev/null", "r");
+        // Source ROS2 environment to ensure ros2 command is available
+        FILE* pipe = popen("bash -c 'source /opt/ros/humble/setup.bash 2>/dev/null && ros2 topic list -t 2>/dev/null'", "r");
         if (!pipe) {
             std::cerr << "[ROS2Manager] Failed to execute ros2 topic list" << std::endl;
             return topics;
@@ -356,7 +357,7 @@ std::vector<TopicInfo> ROS2Manager::discover_topics_() {
         
         // Get publisher/subscriber counts for each topic
         for (auto& topic : topics) {
-            std::string cmd = "ros2 topic info " + topic.name + " 2>/dev/null | grep -E 'Publishers|Subscribers'";
+            std::string cmd = "bash -c 'source /opt/ros/humble/setup.bash 2>/dev/null && ros2 topic info " + topic.name + " 2>/dev/null | grep -E \"Publishers|Subscribers\"'";
             FILE* info_pipe = popen(cmd.c_str(), "r");
             if (info_pipe) {
                 char info_buffer[256];
@@ -412,7 +413,7 @@ std::vector<NodeInfo> ROS2Manager::discover_nodes_() {
     std::vector<NodeInfo> nodes;
     
     try {
-        FILE* pipe = popen("ros2 node list 2>/dev/null", "r");
+        FILE* pipe = popen("bash -c 'source /opt/ros/humble/setup.bash 2>/dev/null && ros2 node list 2>/dev/null'", "r");
         if (!pipe) {
             std::cerr << "[ROS2Manager] Failed to execute ros2 node list" << std::endl;
             return nodes;
@@ -440,7 +441,7 @@ std::vector<NodeInfo> ROS2Manager::discover_nodes_() {
                 }
                 
                 // Get node info to list publications and subscriptions
-                std::string cmd = "ros2 node info " + node_name + " 2>/dev/null";
+                std::string cmd = "bash -c 'source /opt/ros/humble/setup.bash 2>/dev/null && ros2 node info " + node_name + " 2>/dev/null'";
                 FILE* info_pipe = popen(cmd.c_str(), "r");
                 if (info_pipe) {
                     char info_buffer[512];
@@ -514,7 +515,7 @@ std::vector<ServiceInfo> ROS2Manager::discover_services_() {
     std::vector<ServiceInfo> services;
     
     try {
-        FILE* pipe = popen("ros2 service list -t 2>/dev/null", "r");
+        FILE* pipe = popen("bash -c 'source /opt/ros/humble/setup.bash 2>/dev/null && ros2 service list -t 2>/dev/null'", "r");
         if (!pipe) {
             std::cerr << "[ROS2Manager] Failed to execute ros2 service list" << std::endl;
             return services;

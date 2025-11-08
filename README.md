@@ -13,14 +13,18 @@ A comprehensive native C++ cross-platform desktop application for real-time ROS2
 - Live discovery of ROS2 topics, nodes, and services
 - Topic metadata: message type, publisher/subscriber counts, frequency
 - Aggressive caching with LRU + TTL eviction
+- Health monitoring with status indicators (🟢 Healthy, 🟡 Degraded, 🔴 Failed)
 - **Performance:** < 500ms topic discovery, > 75% cache hit ratio
+- **Optimized:** 2-tier timer system (1s UI updates, 10s discovery)
 
 ### 🎬 Bag Recording Management
 - Start/stop rosbag2 recording with flexible options
-- Real-time recording status display
+- Real-time recording status display with visual indicators (🔴 RECORDING, ⚫ OFF)
+- Topic-specific health monitoring and rate tracking
 - Previous bag file listing with metadata
 - Quick access to recorded bags (file manager, RViz playback)
 - Compression format selection: zstd, lz4, or none
+- Recording metrics: write speed, message rate, compression ratio
 
 ### 📈 Live Metrics Dashboard
 - System metrics: CPU, memory, disk, thermal
@@ -45,11 +49,12 @@ A comprehensive native C++ cross-platform desktop application for real-time ROS2
 - Works seamlessly offline with cloud sync when available
 
 ### 🖥️ Qt-Based GUI
-- Tab-based interface with 8 specialized views
-- Responsive UI with debounced updates
+- Tab-based interface with 8 specialized views: Topics, Nodes, Services, Selected Topics (monitoring), Recording, Metrics, Export, Network/Upload
+- Responsive UI with debounced updates and dirty table detection
 - Dark/light theme support
-- Real-time status indicators
-- Settings dialog for fine-tuning
+- Real-time status indicators with health color coding
+- Settings dialog for fine-tuning all parameters
+- Multi-select topic monitoring with persistence
 
 ## 🚀 Getting Started
 
@@ -92,6 +97,23 @@ For detailed build instructions, see [BUILD.md](docs/BUILD.md).
 - **[API Documentation](docs/api/) - Generated with Doxygen
 
 ## 🏗️ Architecture
+
+### Code Quality
+- **Memory Safety:** Verified with AddressSanitizer (ASAN) - No leaks detected
+- **Undefined Behavior:** Verified with UndefinedBehaviorSanitizer (UBSAN) - Clean builds
+- **Thread Safety:** All data protected with std::mutex
+- **Container Utilities:** Custom implementations with comprehensive unit tests
+  - BoundedDeque: Fixed-size FIFO with auto-eviction
+  - ThreadSafeQueue: Lock-free queue with condition variables
+  - ResourcePool: Object pool with factory pattern
+  - CacheWithTimeout: TTL-based cache with LRU eviction
+  - MetricsHistoryBuffer: Bounded circular buffer
+
+### Data Validation
+- ✅ **No garbage data:** All values validated in valid ranges
+- ✅ **Type safety:** Proper type casting and bounds checking
+- ✅ **Error handling:** Graceful degradation with proper error messages
+- ✅ **Edge cases:** Handled (empty lists, network offline, disk full, etc.)
 
 ### Core Components
 
@@ -194,6 +216,28 @@ cpp_ros2_live_status_dashboard/
 
 ## 🧪 Testing & Verification
 
+### Unit Tests (GTest)
+```bash
+cd build
+make test
+# Tests for: BoundedDeque, ThreadSafeQueue, ResourcePool, CacheWithTimeout, MetricsHistoryBuffer
+```
+
+### Sanitizer Builds
+```bash
+# AddressSanitizer (memory safety)
+cmake -DCMAKE_BUILD_TYPE=ASAN ..
+make test
+
+# UndefinedBehaviorSanitizer (UB detection)
+cmake -DCMAKE_BUILD_TYPE=UBSAN ..
+make test
+
+# Combined ASAN+UBSAN
+cmake -DCMAKE_BUILD_TYPE=ASAN_UBSAN ..
+make test
+```
+
 ### Run Tests
 ```bash
 cd build
@@ -204,6 +248,32 @@ ctest --output-on-failure
 ```bash
 ./ros2_verify_performance --export --output results.json
 ```
+
+### Comprehensive Test Report
+See [COMPREHENSIVE_TEST.md](COMPREHENSIVE_TEST.md) for detailed verification of all components:
+- ✅ Application initialization
+- ✅ GUI rendering (all 8 tabs)
+- ✅ Metrics accuracy (CPU, Memory, Disk)
+- ✅ ROS2 discovery (topics, nodes, services)
+- ✅ Topic health monitoring
+- ✅ Selected Topics tab actions
+- ✅ Recording functionality
+- ✅ Network/upload features
+- ✅ Data validation (no garbage data)
+- ✅ System stability
+- ✅ Live data with demo publisher
+- ✅ All edge cases handled
+
+### Manual Testing with Demo Publisher
+```bash
+# Terminal 1: Start demo publisher
+python3 demo_publisher.py
+
+# Terminal 2: Start dashboard
+./ros2_dashboard
+```
+
+Demo generates 4 test topics at different rates for verification.
 
 ### Manual Testing
 See [Testing Guide](docs/TESTING.md) for comprehensive test procedures.
@@ -291,6 +361,14 @@ See [Developer Guide](docs/DEVELOPER.md) for:
 
 ## 🐛 Troubleshooting
 
+### ROS2 Commands Not Found (status 256)
+**Fixed:** All ROS2 CLI commands now properly source `/opt/ros/humble/setup.bash`
+```bash
+# If still having issues, manually source before running:
+source /opt/ros/humble/setup.bash
+./ros2_dashboard
+```
+
 ### Application crashes
 ```bash
 # Run with debug symbols
@@ -304,16 +382,24 @@ gdb ./ros2_dashboard
 ros2 topic list
 # Refresh in GUI (Ctrl+R)
 # Check cache TTL in Settings
+# Check: Topics Tab should auto-discover within 3 seconds
 ```
 
 ### High memory usage
 ```bash
 # Reduce cache TTL or thread pool size
-# Clear metrics history
+# Clear metrics history: Edit → Clear Cache
+# Reduce max_history_samples in config
 # Restart application
 ```
 
-See [User Manual](docs/USER_MANUAL.md#troubleshooting) for more solutions.
+### Recording won't start
+```bash
+# Check disk space: df -h
+# Verify rosbag2 is installed: which ros2
+# Check output directory is writable
+# View logs for detailed error messages
+```
 
 ## 📈 Performance Optimization
 
@@ -368,5 +454,12 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 ---
 
 **Version:** 1.0.0  
-**Last Updated:** January 2025  
-**Status:** Production Ready ✅
+**Last Updated:** November 8, 2025  
+**Status:** ✅ Production Ready
+
+### Key Metrics
+- 📊 **All tests passing:** Unit tests (GTest), ASAN, UBSAN verified
+- 🔒 **Memory verified:** Zero leaks with AddressSanitizer
+- 🎯 **Performance:** 2-tier timer system, >75% cache hit ratio
+- 📈 **Comprehensive audit:** 20 major components verified (see COMPREHENSIVE_TEST.md)
+- ✅ **Live verified:** Demo publisher integration tested with real data

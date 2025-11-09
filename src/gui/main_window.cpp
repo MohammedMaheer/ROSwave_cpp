@@ -212,6 +212,17 @@ void MainWindow::on_clear_cache() {
     }
 }
 
+void MainWindow::on_maximize_toggle() {
+    std::cerr << "[MainWindow] Maximize toggle clicked" << std::endl;
+    if (isMaximized()) {
+        showNormal();
+        status_label_->setText("Window restored");
+    } else {
+        showMaximized();
+        status_label_->setText("Window maximized");
+    }
+}
+
 void MainWindow::create_menu_bar_() {
     QMenuBar* menu_bar = menuBar();
 
@@ -266,6 +277,12 @@ void MainWindow::create_tool_bar_() {
     QPushButton* settings_btn = new QPushButton("Settings");
     connect(settings_btn, &QPushButton::clicked, this, &MainWindow::on_settings_changed);
     tool_bar->addWidget(settings_btn);
+
+    tool_bar->addSeparator();
+
+    QPushButton* maximize_btn = new QPushButton("⛶ Maximize");
+    connect(maximize_btn, &QPushButton::clicked, this, &MainWindow::on_maximize_toggle);
+    tool_bar->addWidget(maximize_btn);
 
     tool_bar->addSeparator();
 

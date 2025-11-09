@@ -15,6 +15,7 @@
 #include <QComboBox>
 #include <QLineEdit>
 #include <QTableWidget>
+#include <QScrollArea>
 #include <QTimer>
 #include <QStorageInfo>
 #include <QFileInfo>
@@ -165,7 +166,16 @@ void RecordingTab::on_play_in_rviz_clicked() {
 }
 
 void RecordingTab::create_ui_() {
-    auto layout = new QVBoxLayout();
+    auto outer_layout = new QVBoxLayout(this);
+    
+    // Create scrollable area
+    auto scroll_area = new QScrollArea();
+    scroll_area->setWidgetResizable(true);
+    scroll_area->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    scroll_area->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    
+    auto content_widget = new QWidget();
+    auto layout = new QVBoxLayout(content_widget);
 
     // Recording controls group
     auto controls_group = new QGroupBox("Recording Controls");
@@ -222,6 +232,9 @@ void RecordingTab::create_ui_() {
     bags_table_->setHorizontalHeaderLabels(
         {"Filename", "Size (MB)", "Duration", "Topics", "Date"});
     bags_table_->horizontalHeader()->setStretchLastSection(true);
+    // Enable scrollbars
+    bags_table_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    bags_table_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
 
     auto bags_buttons_layout = new QHBoxLayout();
     refresh_bags_button_ = new QPushButton("Refresh");
@@ -250,7 +263,12 @@ void RecordingTab::create_ui_() {
 
     layout->addWidget(controls_group);
     layout->addWidget(bags_group);
-    setLayout(layout);
+    content_widget->setLayout(layout);
+    
+    // Set scroll area content and add to main layout
+    scroll_area->setWidget(content_widget);
+    outer_layout->addWidget(scroll_area);
+    setLayout(outer_layout);
 }
 
 void RecordingTab::update_recording_controls_() {

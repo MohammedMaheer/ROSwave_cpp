@@ -134,6 +134,9 @@ void TopicsTab::create_ui_() {
     topics_table_->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
     topics_table_->setSelectionBehavior(QAbstractItemView::SelectRows);
     topics_table_->setAlternatingRowColors(true);
+    // Enable scrollbars
+    topics_table_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    topics_table_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     
     connect(topics_table_, &QTableWidget::cellClicked, 
             this, &TopicsTab::on_topic_selected);
@@ -147,6 +150,9 @@ void TopicsTab::create_ui_() {
     message_preview_->setReadOnly(true);
     message_preview_->setMaximumHeight(150);
     message_preview_->setPlaceholderText("Select a topic to see its latest message...");
+    // Enable scrollbars for text preview
+    message_preview_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    message_preview_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     
     auto preview_container = new QWidget();
     auto preview_layout = new QVBoxLayout();

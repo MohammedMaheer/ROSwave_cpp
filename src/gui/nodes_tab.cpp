@@ -82,6 +82,9 @@ void NodesTab::create_ui_() {
     nodes_tree_->header()->setSectionResizeMode(1, QHeaderView::Stretch);
     nodes_tree_->header()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
     nodes_tree_->setAlternatingRowColors(true);
+    // Enable scrollbars
+    nodes_tree_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    nodes_tree_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     
     layout->addWidget(nodes_tree_);
     

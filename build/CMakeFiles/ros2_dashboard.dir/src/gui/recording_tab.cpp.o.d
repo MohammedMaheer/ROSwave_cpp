@@ -360,6 +360,8 @@ CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDir \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStorageInfo \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFileInfo \

@@ -13,6 +13,7 @@
 #include "metrics_collector.hpp"
 #include "metrics_history_buffer.hpp"
 #include "async_worker.hpp"
+#include "../ros2_metrics_collector.hpp"
 
 #ifdef HAVE_QCUSTOMPLOT
     #include "qcustomplot.h"
@@ -40,7 +41,8 @@ public:
     ~MetricsTab() override;
 
     void initialize(std::shared_ptr<MetricsCollector> metrics_collector,
-                   std::shared_ptr<AsyncWorker> async_worker);
+                   std::shared_ptr<AsyncWorker> async_worker,
+                   std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_collector = nullptr);
 
     void refresh_metrics();
 
@@ -54,6 +56,7 @@ private slots:
 private:
     std::shared_ptr<MetricsCollector> metrics_collector_;
     std::shared_ptr<AsyncWorker> async_worker_;
+    std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_metrics_collector_;
     std::unique_ptr<MetricsHistoryBuffer> history_buffer_;
     QTimer* metrics_refresh_timer_;
 
@@ -63,6 +66,10 @@ private:
     QCustomPlot* memory_chart_;
     QCustomPlot* disk_io_chart_;
     QCustomPlot* network_chart_;
+    QCustomPlot* topics_chart_;
+    QCustomPlot* throughput_chart_;
+    QCustomPlot* service_latency_chart_;
+    QCustomPlot* recording_chart_;
 #endif
 
     // Stat labels
@@ -79,11 +86,18 @@ private:
     QLabel* memory_stats_label_;
     QLabel* disk_stats_label_;
     QLabel* network_stats_label_;
+    QLabel* node_count_label_;
+    QLabel* service_count_label_;
+    QLabel* messages_per_sec_label_;
+
+    // UI container for scrolling
+    class QScrollArea* scroll_area_;
 
     void create_ui_();
     void update_metrics_display_();
     void update_charts_();
-    
+    void update_ros2_charts_();
+    void on_maximize_button_clicked();
 #ifdef HAVE_QCUSTOMPLOT
     void setup_chart_(QCustomPlot* chart, const QString& title, const QString& y_label);
     void update_chart_(QCustomPlot* chart, 

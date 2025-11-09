@@ -11,6 +11,8 @@
 #include <QPushButton>
 #include <QFileDialog>
 #include <QSplitter>
+#include <QScrollArea>
+#include <QMainWindow>
 #include <Qt>
 #include <algorithm>
 #include <cmath>
@@ -30,12 +32,20 @@ MetricsTab::MetricsTab(QWidget* parent)
       cpu_stats_label_(nullptr),
       memory_stats_label_(nullptr),
       disk_stats_label_(nullptr),
-      network_stats_label_(nullptr)
+    network_stats_label_(nullptr),
+    node_count_label_(nullptr),
+    service_count_label_(nullptr),
+    messages_per_sec_label_(nullptr),
+    ros2_metrics_collector_(nullptr)
 #ifdef HAVE_QCUSTOMPLOT
       , cpu_chart_(nullptr),
       memory_chart_(nullptr),
       disk_io_chart_(nullptr),
       network_chart_(nullptr)
+    , topics_chart_(nullptr),
+    throughput_chart_(nullptr),
+    service_latency_chart_(nullptr),
+    recording_chart_(nullptr)
 #endif
 { 
     history_buffer_ = std::make_unique<MetricsHistoryBuffer>();
@@ -45,9 +55,11 @@ MetricsTab::MetricsTab(QWidget* parent)
 MetricsTab::~MetricsTab() = default;
 
 void MetricsTab::initialize(std::shared_ptr<MetricsCollector> metrics_collector,
-                           std::shared_ptr<AsyncWorker> async_worker) {
+                           std::shared_ptr<AsyncWorker> async_worker,
+                           std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_collector) {
     metrics_collector_ = metrics_collector;
     async_worker_ = async_worker;
+    ros2_metrics_collector_ = ros2_collector;
     
     // Setup auto-refresh timer
     metrics_refresh_timer_ = new QTimer(this);
@@ -98,7 +110,25 @@ void MetricsTab::on_update_timer_timeout() {
 }
 
 void MetricsTab::create_ui_() {
-    auto main_layout = new QVBoxLayout();
+    auto outer_layout = new QVBoxLayout(this);
+    
+    // ===== Top Control Bar with Maximize Button =====
+    auto control_bar = new QHBoxLayout();
+    auto maximize_btn = new QPushButton("⛶ Maximize Metrics Tab", this);
+    connect(maximize_btn, &QPushButton::clicked, this, &MetricsTab::on_maximize_button_clicked);
+    control_bar->addWidget(maximize_btn);
+    control_bar->addStretch();
+    outer_layout->addLayout(control_bar);
+    
+    // ===== Scrollable Content Area =====
+    scroll_area_ = new QScrollArea(this);
+    scroll_area_->setWidgetResizable(true);
+    scroll_area_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    scroll_area_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    
+    // Create widget to hold all metrics content
+    auto content_widget = new QWidget();
+    auto main_layout = new QVBoxLayout(content_widget);
 
     // ===== Current Metrics Display (Top Section) =====
     auto current_group = new QGroupBox("Current Metrics");
@@ -137,6 +167,14 @@ void MetricsTab::create_ui_() {
     stats_layout->addWidget(disk_stats_label_);
     stats_layout->addWidget(network_stats_label_);
     
+    // ROS2 specific summary labels
+    node_count_label_ = new QLabel("Nodes: 0");
+    service_count_label_ = new QLabel("Services: 0");
+    messages_per_sec_label_ = new QLabel("Msg/s: 0");
+    stats_layout->addWidget(node_count_label_);
+    stats_layout->addWidget(service_count_label_);
+    stats_layout->addWidget(messages_per_sec_label_);
+    
     stats_group->setLayout(stats_layout);
     main_layout->addWidget(stats_group);
 
@@ -167,6 +205,32 @@ void MetricsTab::create_ui_() {
     main_layout->addWidget(charts_group);
 #endif
 
+#ifdef HAVE_QCUSTOMPLOT
+    // ===== ROS2 Charts (Fourth Section) - Topics/Throughput/Service/Recording =====
+    auto ros2_charts_group = new QGroupBox("ROS2 Metrics Charts (Short History)");
+    auto ros2_charts_layout = new QGridLayout();
+
+    topics_chart_ = new QCustomPlot();
+    setup_chart_(topics_chart_, "Topic Discovery Rate", "Topics/min");
+
+    throughput_chart_ = new QCustomPlot();
+    setup_chart_(throughput_chart_, "Message Throughput", "Messages/s");
+
+    service_latency_chart_ = new QCustomPlot();
+    setup_chart_(service_latency_chart_, "Service Latency", "ms");
+
+    recording_chart_ = new QCustomPlot();
+    setup_chart_(recording_chart_, "Recording Throughput", "MB/s");
+
+    ros2_charts_layout->addWidget(topics_chart_, 0, 0);
+    ros2_charts_layout->addWidget(throughput_chart_, 0, 1);
+    ros2_charts_layout->addWidget(service_latency_chart_, 1, 0);
+    ros2_charts_layout->addWidget(recording_chart_, 1, 1);
+
+    ros2_charts_group->setLayout(ros2_charts_layout);
+    main_layout->addWidget(ros2_charts_group);
+#endif
+
     // ===== Export Buttons (Bottom Section) =====
     auto export_layout = new QHBoxLayout();
     auto export_csv_btn = new QPushButton("Export CSV");
@@ -186,7 +250,12 @@ void MetricsTab::create_ui_() {
     export_layout->addStretch();
     
     main_layout->addLayout(export_layout);
-    setLayout(main_layout);
+    content_widget->setLayout(main_layout);
+    
+    // Set the scrollable content
+    scroll_area_->setWidget(content_widget);
+    outer_layout->addWidget(scroll_area_);
+    setLayout(outer_layout);
 }
 
 void MetricsTab::update_metrics_display_() {
@@ -239,6 +308,14 @@ void MetricsTab::update_metrics_display_() {
         QString::asprintf("Network: min=%.1f max=%.1f avg=%.1f Mbps",
                          net_stats.min, net_stats.max, net_stats.avg));
 
+    // Update ROS2 summary labels if collector provided
+    if (ros2_metrics_collector_) {
+        auto ros2 = ros2_metrics_collector_->get_metrics();
+        node_count_label_->setText(QString::asprintf("Nodes: %u", ros2.total_nodes));
+        service_count_label_->setText(QString::asprintf("Services: %u", ros2.total_services));
+        messages_per_sec_label_->setText(QString::asprintf("Msg/s: %llu", (unsigned long long)ros2.total_messages_per_sec));
+    }
+
     // Update charts
     update_charts_();
 }
@@ -276,6 +353,10 @@ void MetricsTab::update_charts_() {
     if (memory_chart_) update_chart_(memory_chart_, x_data, memory_data, Qt::green);
     if (disk_io_chart_) update_chart_(disk_io_chart_, x_data, disk_data, Qt::red);
     if (network_chart_) update_chart_(network_chart_, x_data, network_data, Qt::darkMagenta);
+    #ifdef HAVE_QCUSTOMPLOT
+        // Update ROS2-specific charts if collector available
+        update_ros2_charts_();
+    #endif
 #endif
 }
 
@@ -341,5 +422,56 @@ void MetricsTab::update_chart_(QCustomPlot* chart,
 }
 
 #endif  // HAVE_QCUSTOMPLOT
+
+void MetricsTab::update_ros2_charts_() {
+#ifdef HAVE_QCUSTOMPLOT
+    if (!ros2_metrics_collector_) return;
+
+    auto topics = ros2_metrics_collector_->get_topic_discovery_history();
+    auto throughput = ros2_metrics_collector_->get_message_throughput_history();
+    auto servlat = ros2_metrics_collector_->get_service_latency_history();
+    auto recording = ros2_metrics_collector_->get_recording_throughput_history();
+
+    // Helper to build simple x axis (0..N-1 seconds)
+    auto build_x = [](size_t n) {
+        std::vector<double> x(n);
+        for (size_t i = 0; i < n; ++i) x[i] = static_cast<double>(i);
+        return x;
+    };
+
+    if (topics_chart_ && !topics.empty()) {
+        auto x = build_x(topics.size());
+        update_chart_(topics_chart_, x, topics, Qt::cyan);
+    }
+
+    if (throughput_chart_ && !throughput.empty()) {
+        auto x = build_x(throughput.size());
+        update_chart_(throughput_chart_, x, throughput, Qt::darkGreen);
+    }
+
+    if (service_latency_chart_ && !servlat.empty()) {
+        auto x = build_x(servlat.size());
+        update_chart_(service_latency_chart_, x, servlat, Qt::magenta);
+    }
+
+    if (recording_chart_ && !recording.empty()) {
+        auto x = build_x(recording.size());
+        update_chart_(recording_chart_, x, recording, Qt::darkCyan);
+    }
+#endif
+}
+
+void MetricsTab::on_maximize_button_clicked() {
+    if (parentWidget() && parentWidget()->isWindow()) {
+        auto* window = dynamic_cast<QMainWindow*>(parentWidget()->window());
+        if (window) {
+            if (window->isMaximized()) {
+                window->showNormal();
+            } else {
+                window->showMaximized();
+            }
+        }
+    }
+}
 
 }  // namespace ros2_dashboard::gui

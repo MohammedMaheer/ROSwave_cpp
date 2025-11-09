@@ -63,6 +63,7 @@ private slots:
     void on_health_report();
     void on_diagnostics();
     void on_clear_cache();
+    void on_maximize_toggle();
     void on_fast_timer_timeout();
     void on_slow_timer_timeout();
     void on_tab_changed(int index);

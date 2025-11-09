@@ -85,6 +85,9 @@ void ServicesTab::create_ui_() {
     services_table_->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
     services_table_->setSelectionBehavior(QAbstractItemView::SelectRows);
     services_table_->setAlternatingRowColors(true);
+    // Enable scrollbars
+    services_table_->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    services_table_->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     
     layout->addWidget(services_table_);
     setLayout(layout);

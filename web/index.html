@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROS2 Dashboard - Remote Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🤖 ROS2 Dashboard</h1>
+            <div class="header-controls">
+                <span id="connection-status" class="status disconnected">● Disconnected</span>
+                <button id="settings-btn" class="btn-icon" title="Settings">⚙️</button>
+            </div>
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="overview">📊 Overview</a></li>
+                <li><a href="#" class="nav-link" data-page="topics">📋 Topics</a></li>
+                <li><a href="#" class="nav-link" data-page="nodes">🔄 Nodes</a></li>
+                <li><a href="#" class="nav-link" data-page="metrics">📈 Metrics</a></li>
+                <li><a href="#" class="nav-link" data-page="services">⚙️ Services</a></li>
+                <li><a href="#" class="nav-link" data-page="health">❤️ Health</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Overview Page -->
+            <div class="page" id="overview-page" style="display: block;">
+                <h2>Dashboard Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">CPU Usage</div>
+                        <div class="stat-value" id="cpu-usage">--</div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" id="cpu-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Memory</div>
+                        <div class="stat-value" id="memory-usage">--</div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" id="memory-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Temperature</div>
+                        <div class="stat-value" id="temperature">--</div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" id="temp-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Topics</div>
+                        <div class="stat-value" id="topic-count">--</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>System Status</h3>
+                    <div id="status-info" class="info-content">
+                        <p>Connecting...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topics Page -->
+            <div class="page" id="topics-page">
+                <h2>Topics</h2>
+                <div class="search-bar">
+                    <input type="text" id="topics-search" placeholder="Search topics...">
+                </div>
+                <div id="topics-list" class="list-container">
+                    <p class="loading">Loading topics...</p>
+                </div>
+            </div>
+
+            <!-- Nodes Page -->
+            <div class="page" id="nodes-page">
+                <h2>Nodes</h2>
+                <div class="search-bar">
+                    <input type="text" id="nodes-search" placeholder="Search nodes...">
+                </div>
+                <div id="nodes-list" class="list-container">
+                    <p class="loading">Loading nodes...</p>
+                </div>
+            </div>
+
+            <!-- Metrics Page -->
+            <div class="page" id="metrics-page">
+                <h2>Metrics History</h2>
+                <div class="metrics-controls">
+                    <label>Duration: 
+                        <select id="duration-select">
+                            <option value="15">15 minutes</option>
+                            <option value="60" selected>1 hour</option>
+                            <option value="240">4 hours</option>
+                            <option value="1440">1 day</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="metrics-chart" class="chart-container">
+                    <p class="loading">Loading chart...</p>
+                </div>
+            </div>
+
+            <!-- Services Page -->
+            <div class="page" id="services-page">
+                <h2>Services</h2>
+                <div id="services-list" class="list-container">
+                    <p class="loading">Loading services...</p>
+                </div>
+            </div>
+
+            <!-- Health Page -->
+            <div class="page" id="health-page">
+                <h2>Health Status</h2>
+                <div id="health-status" class="health-container">
+                    <p class="loading">Loading health status...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <div class="settings-form">
+                <div class="form-group">
+                    <label>Dashboard URL:</label>
+                    <input type="text" id="dashboard-url" placeholder="http://localhost:8080">
+                </div>
+                <div class="form-group">
+                    <label>WebSocket URL:</label>
+                    <input type="text" id="websocket-url" placeholder="ws://localhost:8081">
+                </div>
+                <div class="form-group">
+                    <label>Authentication Token:</label>
+                    <input type="password" id="auth-token" placeholder="Leave empty for no auth">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="auto-reconnect" checked>
+                        Auto-reconnect on disconnect
+                    </label>
+                </div>
+                <button id="save-settings" class="btn btn-primary">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

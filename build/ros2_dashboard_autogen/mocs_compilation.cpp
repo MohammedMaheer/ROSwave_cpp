@@ -2,6 +2,7 @@
 #include "6YEA5652QU/moc_alert_manager.cpp"
 #include "BMPI5EA7AM/moc_advanced_chart_widget.cpp"
 #include "BMPI5EA7AM/moc_advanced_filter.cpp"
+#include "BMPI5EA7AM/moc_context_menus.cpp"
 #include "BMPI5EA7AM/moc_export_tab.cpp"
 #include "BMPI5EA7AM/moc_main_window.cpp"
 #include "BMPI5EA7AM/moc_message_inspector_tab.cpp"

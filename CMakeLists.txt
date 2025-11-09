@@ -73,6 +73,7 @@ set(SOURCES
     src/gui/advanced_filter.cpp
     src/gui/topic_dependency_graph.cpp
     src/gui/context_menus.cpp
+    src/logging.cpp
 )
 
 set(HEADERS
@@ -101,6 +102,7 @@ set(HEADERS
     include/gui/advanced_filter.hpp
     include/gui/topic_dependency_graph.hpp
     include/gui/context_menus.hpp
+    include/logging.hpp
     include/adaptive_cache_layer.hpp
     include/performance_optimizations.hpp
     include/gui/ui_improvements.hpp
@@ -191,6 +193,19 @@ if(GTest_FOUND)
 else()
     message(WARNING "GTest not found - unit tests disabled. Install with: sudo apt-get install libgtest-dev")
 endif()
+
+# Standalone logging test (no GTest required)
+add_executable(test_logging tests/test_logging.cpp)
+target_link_libraries(test_logging
+    nlohmann_json::nlohmann_json
+)
+target_compile_options(test_logging PRIVATE -O2 -Wall -Wextra)
+add_test(NAME LoggingTest COMMAND test_logging)
+
+# Standalone context menu test (no GUI required)
+add_executable(test_context_menus_standalone tests/test_context_menus_standalone.cpp)
+target_compile_options(test_context_menus_standalone PRIVATE -O2 -Wall -Wextra)
+add_test(NAME ContextMenusStandaloneTest COMMAND test_context_menus_standalone)
 
 # Installation rules
 install(TARGETS ros2_dashboard ros2_upload_server ros2_verify_performance

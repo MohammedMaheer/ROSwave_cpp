@@ -1049,6 +1049,12 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/context_menus.hpp",
+			"MU",
+			"BMPI5EA7AM/moc_context_menus.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/export_tab.hpp",
 			"MU",
 			"BMPI5EA7AM/moc_export_tab.cpp",
@@ -1130,6 +1136,12 @@
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/upload_tab.hpp",
 			"MU",
 			"BMPI5EA7AM/moc_upload_tab.cpp",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/logging.hpp",
+			"MU",
+			"6YEA5652QU/moc_logging.cpp",
 			null
 		],
 		[
@@ -1295,6 +1307,11 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/context_menus.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/export_tab.cpp",
 			"MU",
 			null
@@ -1356,6 +1373,11 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/upload_tab.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/logging.cpp",
 			"MU",
 			null
 		],

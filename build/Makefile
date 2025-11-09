@@ -250,6 +250,32 @@ test_containers/fast:
 .PHONY : test_containers/fast
 
 #=============================================================================
+# Target rules for targets named test_logging
+
+# Build rule for target.
+test_logging: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_logging
+.PHONY : test_logging
+
+# fast build rule for target.
+test_logging/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/build
+.PHONY : test_logging/fast
+
+#=============================================================================
+# Target rules for targets named test_context_menus_standalone
+
+# Build rule for target.
+test_context_menus_standalone: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_context_menus_standalone
+.PHONY : test_context_menus_standalone
+
+# fast build rule for target.
+test_context_menus_standalone/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/build
+.PHONY : test_context_menus_standalone/fast
+
+#=============================================================================
 # Target rules for targets named ros2_dashboard_autogen
 
 # Build rule for target.
@@ -300,6 +326,32 @@ test_containers_autogen: cmake_check_build_system
 test_containers_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers_autogen.dir/build.make CMakeFiles/test_containers_autogen.dir/build
 .PHONY : test_containers_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_logging_autogen
+
+# Build rule for target.
+test_logging_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_logging_autogen
+.PHONY : test_logging_autogen
+
+# fast build rule for target.
+test_logging_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging_autogen.dir/build.make CMakeFiles/test_logging_autogen.dir/build
+.PHONY : test_logging_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_context_menus_standalone_autogen
+
+# Build rule for target.
+test_context_menus_standalone_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_context_menus_standalone_autogen
+.PHONY : test_context_menus_standalone_autogen
+
+# fast build rule for target.
+test_context_menus_standalone_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone_autogen.dir/build.make CMakeFiles/test_context_menus_standalone_autogen.dir/build
+.PHONY : test_context_menus_standalone_autogen/fast
 
 ros2_dashboard_autogen/mocs_compilation.o: ros2_dashboard_autogen/mocs_compilation.cpp.o
 .PHONY : ros2_dashboard_autogen/mocs_compilation.o
@@ -468,6 +520,30 @@ src/gui/advanced_filter.s: src/gui/advanced_filter.cpp.s
 src/gui/advanced_filter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.s
 .PHONY : src/gui/advanced_filter.cpp.s
+
+src/gui/context_menus.o: src/gui/context_menus.cpp.o
+.PHONY : src/gui/context_menus.o
+
+# target to build an object file
+src/gui/context_menus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o
+.PHONY : src/gui/context_menus.cpp.o
+
+src/gui/context_menus.i: src/gui/context_menus.cpp.i
+.PHONY : src/gui/context_menus.i
+
+# target to preprocess a source file
+src/gui/context_menus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.i
+.PHONY : src/gui/context_menus.cpp.i
+
+src/gui/context_menus.s: src/gui/context_menus.cpp.s
+.PHONY : src/gui/context_menus.s
+
+# target to generate assembly for a file
+src/gui/context_menus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.s
+.PHONY : src/gui/context_menus.cpp.s
 
 src/gui/export_tab.o: src/gui/export_tab.cpp.o
 .PHONY : src/gui/export_tab.o
@@ -781,6 +857,30 @@ src/gui/upload_tab.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.s
 .PHONY : src/gui/upload_tab.cpp.s
 
+src/logging.o: src/logging.cpp.o
+.PHONY : src/logging.o
+
+# target to build an object file
+src/logging.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o
+.PHONY : src/logging.cpp.o
+
+src/logging.i: src/logging.cpp.i
+.PHONY : src/logging.i
+
+# target to preprocess a source file
+src/logging.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/logging.cpp.i
+.PHONY : src/logging.cpp.i
+
+src/logging.s: src/logging.cpp.s
+.PHONY : src/logging.s
+
+# target to generate assembly for a file
+src/logging.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/logging.cpp.s
+.PHONY : src/logging.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -1072,6 +1172,54 @@ test_containers_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers.dir/build.make CMakeFiles/test_containers.dir/test_containers_autogen/mocs_compilation.cpp.s
 .PHONY : test_containers_autogen/mocs_compilation.cpp.s
 
+test_context_menus_standalone_autogen/mocs_compilation.o: test_context_menus_standalone_autogen/mocs_compilation.cpp.o
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.o
+
+# target to build an object file
+test_context_menus_standalone_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/test_context_menus_standalone_autogen/mocs_compilation.cpp.o
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.cpp.o
+
+test_context_menus_standalone_autogen/mocs_compilation.i: test_context_menus_standalone_autogen/mocs_compilation.cpp.i
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_context_menus_standalone_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/test_context_menus_standalone_autogen/mocs_compilation.cpp.i
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.cpp.i
+
+test_context_menus_standalone_autogen/mocs_compilation.s: test_context_menus_standalone_autogen/mocs_compilation.cpp.s
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_context_menus_standalone_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/test_context_menus_standalone_autogen/mocs_compilation.cpp.s
+.PHONY : test_context_menus_standalone_autogen/mocs_compilation.cpp.s
+
+test_logging_autogen/mocs_compilation.o: test_logging_autogen/mocs_compilation.cpp.o
+.PHONY : test_logging_autogen/mocs_compilation.o
+
+# target to build an object file
+test_logging_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/test_logging_autogen/mocs_compilation.cpp.o
+.PHONY : test_logging_autogen/mocs_compilation.cpp.o
+
+test_logging_autogen/mocs_compilation.i: test_logging_autogen/mocs_compilation.cpp.i
+.PHONY : test_logging_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_logging_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/test_logging_autogen/mocs_compilation.cpp.i
+.PHONY : test_logging_autogen/mocs_compilation.cpp.i
+
+test_logging_autogen/mocs_compilation.s: test_logging_autogen/mocs_compilation.cpp.s
+.PHONY : test_logging_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_logging_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/test_logging_autogen/mocs_compilation.cpp.s
+.PHONY : test_logging_autogen/mocs_compilation.cpp.s
+
 tests/test_containers.o: tests/test_containers.cpp.o
 .PHONY : tests/test_containers.o
 
@@ -1096,6 +1244,54 @@ tests/test_containers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers.dir/build.make CMakeFiles/test_containers.dir/tests/test_containers.cpp.s
 .PHONY : tests/test_containers.cpp.s
 
+tests/test_context_menus_standalone.o: tests/test_context_menus_standalone.cpp.o
+.PHONY : tests/test_context_menus_standalone.o
+
+# target to build an object file
+tests/test_context_menus_standalone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/tests/test_context_menus_standalone.cpp.o
+.PHONY : tests/test_context_menus_standalone.cpp.o
+
+tests/test_context_menus_standalone.i: tests/test_context_menus_standalone.cpp.i
+.PHONY : tests/test_context_menus_standalone.i
+
+# target to preprocess a source file
+tests/test_context_menus_standalone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/tests/test_context_menus_standalone.cpp.i
+.PHONY : tests/test_context_menus_standalone.cpp.i
+
+tests/test_context_menus_standalone.s: tests/test_context_menus_standalone.cpp.s
+.PHONY : tests/test_context_menus_standalone.s
+
+# target to generate assembly for a file
+tests/test_context_menus_standalone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/tests/test_context_menus_standalone.cpp.s
+.PHONY : tests/test_context_menus_standalone.cpp.s
+
+tests/test_logging.o: tests/test_logging.cpp.o
+.PHONY : tests/test_logging.o
+
+# target to build an object file
+tests/test_logging.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/tests/test_logging.cpp.o
+.PHONY : tests/test_logging.cpp.o
+
+tests/test_logging.i: tests/test_logging.cpp.i
+.PHONY : tests/test_logging.i
+
+# target to preprocess a source file
+tests/test_logging.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/tests/test_logging.cpp.i
+.PHONY : tests/test_logging.cpp.i
+
+tests/test_logging.s: tests/test_logging.cpp.s
+.PHONY : tests/test_logging.s
+
+# target to generate assembly for a file
+tests/test_logging.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/tests/test_logging.cpp.s
+.PHONY : tests/test_logging.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1114,11 +1310,15 @@ help:
 	@echo "... ros2_upload_server_autogen"
 	@echo "... ros2_verify_performance_autogen"
 	@echo "... test_containers_autogen"
+	@echo "... test_context_menus_standalone_autogen"
+	@echo "... test_logging_autogen"
 	@echo "... uninstall"
 	@echo "... ros2_dashboard"
 	@echo "... ros2_upload_server"
 	@echo "... ros2_verify_performance"
 	@echo "... test_containers"
+	@echo "... test_context_menus_standalone"
+	@echo "... test_logging"
 	@echo "... ros2_dashboard_autogen/mocs_compilation.o"
 	@echo "... ros2_dashboard_autogen/mocs_compilation.i"
 	@echo "... ros2_dashboard_autogen/mocs_compilation.s"
@@ -1140,6 +1340,9 @@ help:
 	@echo "... src/gui/advanced_filter.o"
 	@echo "... src/gui/advanced_filter.i"
 	@echo "... src/gui/advanced_filter.s"
+	@echo "... src/gui/context_menus.o"
+	@echo "... src/gui/context_menus.i"
+	@echo "... src/gui/context_menus.s"
 	@echo "... src/gui/export_tab.o"
 	@echo "... src/gui/export_tab.i"
 	@echo "... src/gui/export_tab.s"
@@ -1179,6 +1382,9 @@ help:
 	@echo "... src/gui/upload_tab.o"
 	@echo "... src/gui/upload_tab.i"
 	@echo "... src/gui/upload_tab.s"
+	@echo "... src/logging.o"
+	@echo "... src/logging.i"
+	@echo "... src/logging.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -1215,9 +1421,21 @@ help:
 	@echo "... test_containers_autogen/mocs_compilation.o"
 	@echo "... test_containers_autogen/mocs_compilation.i"
 	@echo "... test_containers_autogen/mocs_compilation.s"
+	@echo "... test_context_menus_standalone_autogen/mocs_compilation.o"
+	@echo "... test_context_menus_standalone_autogen/mocs_compilation.i"
+	@echo "... test_context_menus_standalone_autogen/mocs_compilation.s"
+	@echo "... test_logging_autogen/mocs_compilation.o"
+	@echo "... test_logging_autogen/mocs_compilation.i"
+	@echo "... test_logging_autogen/mocs_compilation.s"
 	@echo "... tests/test_containers.o"
 	@echo "... tests/test_containers.i"
 	@echo "... tests/test_containers.s"
+	@echo "... tests/test_context_menus_standalone.o"
+	@echo "... tests/test_context_menus_standalone.i"
+	@echo "... tests/test_context_menus_standalone.s"
+	@echo "... tests/test_logging.o"
+	@echo "... tests/test_logging.i"
+	@echo "... tests/test_logging.s"
 .PHONY : help
 
 

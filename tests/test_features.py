@@ -16,8 +16,8 @@ class TestResult:
     def __init__(self, name: str):
         self.name = name
         self.passed = False
-        self.error = None
-        self.details = {}
+        self.error: str | None = None
+        self.details: Dict[str, Any] = {}
         
     def __repr__(self):
         status = "✅ PASS" if self.passed else "❌ FAIL"

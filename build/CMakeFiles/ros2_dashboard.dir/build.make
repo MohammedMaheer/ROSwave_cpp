@@ -489,6 +489,34 @@ CMakeFiles/ros2_dashboard.dir/src/logging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/logging.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/logging.cpp -o CMakeFiles/ros2_dashboard.dir/src/logging.cpp.s
 
+CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
+CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o: ../src/alert_manager_advanced.cpp
+CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp
+
+CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp > CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.i
+
+CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp -o CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.s
+
+CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
+CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o: ../src/advanced_chart_features.cpp
+CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp
+
+CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp > CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.i
+
+CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp -o CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s
+
 # Object files for target ros2_dashboard
 ros2_dashboard_OBJECTS = \
 "CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o" \
@@ -520,7 +548,9 @@ ros2_dashboard_OBJECTS = \
 "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o" \
-"CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o"
+"CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o" \
+"CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o" \
+"CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o"
 
 # External object files for target ros2_dashboard
 ros2_dashboard_EXTERNAL_OBJECTS =
@@ -555,6 +585,8 @@ ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o
+ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o
+ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/build.make
 ros2_dashboard: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 ros2_dashboard: /usr/lib/x86_64-linux-gnu/libQt5Concurrent.so.5.15.3
@@ -625,7 +657,7 @@ ros2_dashboard: /opt/ros/humble/lib/librosidl_runtime_c.so
 ros2_dashboard: /opt/ros/humble/lib/librcutils.so
 ros2_dashboard: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ros2_dashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable ros2_dashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros2_dashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

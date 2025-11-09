@@ -425,6 +425,30 @@ ros2_verify_performance_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_verify_performance.dir/build.make CMakeFiles/ros2_verify_performance.dir/ros2_verify_performance_autogen/mocs_compilation.cpp.s
 .PHONY : ros2_verify_performance_autogen/mocs_compilation.cpp.s
 
+src/advanced_chart_features.o: src/advanced_chart_features.cpp.o
+.PHONY : src/advanced_chart_features.o
+
+# target to build an object file
+src/advanced_chart_features.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o
+.PHONY : src/advanced_chart_features.cpp.o
+
+src/advanced_chart_features.i: src/advanced_chart_features.cpp.i
+.PHONY : src/advanced_chart_features.i
+
+# target to preprocess a source file
+src/advanced_chart_features.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.i
+.PHONY : src/advanced_chart_features.cpp.i
+
+src/advanced_chart_features.s: src/advanced_chart_features.cpp.s
+.PHONY : src/advanced_chart_features.s
+
+# target to generate assembly for a file
+src/advanced_chart_features.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s
+.PHONY : src/advanced_chart_features.cpp.s
+
 src/alert_manager.o: src/alert_manager.cpp.o
 .PHONY : src/alert_manager.o
 
@@ -448,6 +472,30 @@ src/alert_manager.s: src/alert_manager.cpp.s
 src/alert_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.s
 .PHONY : src/alert_manager.cpp.s
+
+src/alert_manager_advanced.o: src/alert_manager_advanced.cpp.o
+.PHONY : src/alert_manager_advanced.o
+
+# target to build an object file
+src/alert_manager_advanced.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o
+.PHONY : src/alert_manager_advanced.cpp.o
+
+src/alert_manager_advanced.i: src/alert_manager_advanced.cpp.i
+.PHONY : src/alert_manager_advanced.i
+
+# target to preprocess a source file
+src/alert_manager_advanced.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.i
+.PHONY : src/alert_manager_advanced.cpp.i
+
+src/alert_manager_advanced.s: src/alert_manager_advanced.cpp.s
+.PHONY : src/alert_manager_advanced.s
+
+# target to generate assembly for a file
+src/alert_manager_advanced.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.s
+.PHONY : src/alert_manager_advanced.cpp.s
 
 src/async_worker.o: src/async_worker.cpp.o
 .PHONY : src/async_worker.o
@@ -1352,9 +1400,15 @@ help:
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.o"
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.i"
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.s"
+	@echo "... src/advanced_chart_features.o"
+	@echo "... src/advanced_chart_features.i"
+	@echo "... src/advanced_chart_features.s"
 	@echo "... src/alert_manager.o"
 	@echo "... src/alert_manager.i"
 	@echo "... src/alert_manager.s"
+	@echo "... src/alert_manager_advanced.o"
+	@echo "... src/alert_manager_advanced.i"
+	@echo "... src/alert_manager_advanced.s"
 	@echo "... src/async_worker.o"
 	@echo "... src/async_worker.i"
 	@echo "... src/async_worker.s"

@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/mocs_compilation.cpp" "CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp" "CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp" "CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/async_worker.cpp" "CMakeFiles/ros2_dashboard.dir/src/async_worker.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/async_worker.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_chart_widget.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_filter.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o.d"

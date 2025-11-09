@@ -75,6 +75,8 @@ set(SOURCES
     src/gui/topic_dependency_graph.cpp
     src/gui/context_menus.cpp
     src/logging.cpp
+    src/alert_manager_advanced.cpp
+    src/advanced_chart_features.cpp
 )
 
 set(HEADERS
@@ -108,6 +110,8 @@ set(HEADERS
     include/adaptive_cache_layer.hpp
     include/performance_optimizations.hpp
     include/gui/ui_improvements.hpp
+    include/alert_manager_advanced.hpp
+    include/advanced_chart_features.hpp
 )
 
 # Main executable

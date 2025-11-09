@@ -1025,9 +1025,21 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/advanced_chart_features.hpp",
+			"MU",
+			"6YEA5652QU/moc_advanced_chart_features.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager.hpp",
 			"MU",
 			"6YEA5652QU/moc_alert_manager.cpp",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp",
+			"MU",
+			"6YEA5652QU/moc_alert_manager_advanced.cpp",
 			null
 		],
 		[
@@ -1293,7 +1305,17 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp",
 			"MU",
 			null
 		],

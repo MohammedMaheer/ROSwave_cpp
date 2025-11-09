@@ -579,6 +579,30 @@ src/alert_manager_advanced.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/alert_manager_advanced.cpp.s
 .PHONY : src/alert_manager_advanced.cpp.s
 
+src/analytics_dashboard.o: src/analytics_dashboard.cpp.o
+.PHONY : src/analytics_dashboard.o
+
+# target to build an object file
+src/analytics_dashboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/analytics_dashboard.cpp.o
+.PHONY : src/analytics_dashboard.cpp.o
+
+src/analytics_dashboard.i: src/analytics_dashboard.cpp.i
+.PHONY : src/analytics_dashboard.i
+
+# target to preprocess a source file
+src/analytics_dashboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/analytics_dashboard.cpp.i
+.PHONY : src/analytics_dashboard.cpp.i
+
+src/analytics_dashboard.s: src/analytics_dashboard.cpp.s
+.PHONY : src/analytics_dashboard.s
+
+# target to generate assembly for a file
+src/analytics_dashboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/analytics_dashboard.cpp.s
+.PHONY : src/analytics_dashboard.cpp.s
+
 src/async_worker.o: src/async_worker.cpp.o
 .PHONY : src/async_worker.o
 
@@ -1690,6 +1714,9 @@ help:
 	@echo "... src/alert_manager_advanced.o"
 	@echo "... src/alert_manager_advanced.i"
 	@echo "... src/alert_manager_advanced.s"
+	@echo "... src/analytics_dashboard.o"
+	@echo "... src/analytics_dashboard.i"
+	@echo "... src/analytics_dashboard.s"
 	@echo "... src/async_worker.o"
 	@echo "... src/async_worker.i"
 	@echo "... src/async_worker.s"

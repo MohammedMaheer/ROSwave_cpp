@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o.d"
+  "CMakeFiles/ros2_dashboard.dir/src/analytics_dashboard.cpp.o"
+  "CMakeFiles/ros2_dashboard.dir/src/analytics_dashboard.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/async_worker.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/async_worker.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o"

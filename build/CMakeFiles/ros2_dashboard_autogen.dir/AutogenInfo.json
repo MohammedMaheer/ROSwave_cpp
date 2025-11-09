@@ -1043,6 +1043,12 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/analytics_dashboard.hpp",
+			"MU",
+			"6YEA5652QU/moc_analytics_dashboard.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/async_worker.hpp",
 			"MU",
 			"6YEA5652QU/moc_async_worker.cpp",
@@ -1352,6 +1358,11 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/alert_manager_advanced.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/analytics_dashboard.cpp",
 			"MU",
 			null
 		],

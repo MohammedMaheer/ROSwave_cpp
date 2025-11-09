@@ -82,6 +82,7 @@ set(SOURCES
     src/server/rest_api_server.cpp
     src/server/websocket_server.cpp
     src/server/api_routes.cpp
+    src/analytics_dashboard.cpp
 )
 
 set(HEADERS
@@ -123,6 +124,7 @@ set(HEADERS
     include/server/rest_api_server.hpp
     include/server/websocket_server.hpp
     include/server/api_routes.hpp
+    include/analytics_dashboard.hpp
 )
 
 # Main executable

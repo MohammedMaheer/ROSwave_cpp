@@ -237,10 +237,24 @@ CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/session_manager.cpp -o CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.s
 
+CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
+CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o: ../src/ros2_metrics_collector.cpp
+CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp
+
+CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp > CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.i
+
+CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp -o CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.s
+
 CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: ../src/gui/main_window.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/main_window.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o: ../src/gui/topics_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/topics_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o: ../src/gui/nodes_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/nodes_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o: ../src/gui/selected_topics_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/selected_topics_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o: ../src/gui/services_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/services_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o: ../src/gui/recording_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/recording_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/recording_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: ../src/gui/metrics_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/metrics_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.i: cmake_force
@@ -338,7 +352,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o: ../src/gui/export_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/export_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.i: cmake_force
@@ -352,7 +366,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/export_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o: ../src/gui/network_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/network_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.i: cmake_force
@@ -366,7 +380,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/network_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o: ../src/gui/upload_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/upload_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.i: cmake_force
@@ -380,7 +394,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o: ../src/gui/settings_dialog.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/settings_dialog.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.i: cmake_force
@@ -394,7 +408,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o: ../src/gui/message_inspector_tab.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/message_inspector_tab.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.i: cmake_force
@@ -408,7 +422,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o: ../src/gui/advanced_chart_widget.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_chart_widget.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.i: cmake_force
@@ -422,7 +436,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o: ../src/gui/advanced_filter.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_filter.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.i: cmake_force
@@ -436,7 +450,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o: ../src/gui/topic_dependency_graph.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/topic_dependency_graph.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.i: cmake_force
@@ -450,7 +464,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o: ../src/gui/context_menus.cpp
 CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/context_menus.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.i: cmake_force
@@ -464,7 +478,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.s: cmake_force
 CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
 CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o: ../src/logging.cpp
 CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/logging.cpp
 
 CMakeFiles/ros2_dashboard.dir/src/logging.cpp.i: cmake_force
@@ -489,6 +503,7 @@ ros2_dashboard_OBJECTS = \
 "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o" \
+"CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o" \
@@ -522,6 +537,7 @@ ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o
+ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/nodes_tab.cpp.o
@@ -609,7 +625,7 @@ ros2_dashboard: /opt/ros/humble/lib/librosidl_runtime_c.so
 ros2_dashboard: /opt/ros/humble/lib/librcutils.so
 ros2_dashboard: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ros2_dashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ros2_dashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros2_dashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

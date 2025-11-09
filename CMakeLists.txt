@@ -57,6 +57,7 @@ set(SOURCES
     src/process_guard.cpp
     src/alert_manager.cpp
     src/session_manager.cpp
+    src/ros2_metrics_collector.cpp
     src/gui/main_window.cpp
     src/gui/topics_tab.cpp
     src/gui/nodes_tab.cpp
@@ -86,6 +87,7 @@ set(HEADERS
     include/topic_monitor.hpp
     include/alert_manager.hpp
     include/session_manager.hpp
+    include/ros2_metrics_collector.hpp
     include/gui/main_window.hpp
     include/gui/topics_tab.hpp
     include/gui/nodes_tab.hpp

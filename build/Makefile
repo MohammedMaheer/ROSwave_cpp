@@ -1052,6 +1052,30 @@ src/ros2_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.s
 .PHONY : src/ros2_manager.cpp.s
 
+src/ros2_metrics_collector.o: src/ros2_metrics_collector.cpp.o
+.PHONY : src/ros2_metrics_collector.o
+
+# target to build an object file
+src/ros2_metrics_collector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o
+.PHONY : src/ros2_metrics_collector.cpp.o
+
+src/ros2_metrics_collector.i: src/ros2_metrics_collector.cpp.i
+.PHONY : src/ros2_metrics_collector.i
+
+# target to preprocess a source file
+src/ros2_metrics_collector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.i
+.PHONY : src/ros2_metrics_collector.cpp.i
+
+src/ros2_metrics_collector.s: src/ros2_metrics_collector.cpp.s
+.PHONY : src/ros2_metrics_collector.s
+
+# target to generate assembly for a file
+src/ros2_metrics_collector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.s
+.PHONY : src/ros2_metrics_collector.cpp.s
+
 src/server/upload_server.o: src/server/upload_server.cpp.o
 .PHONY : src/server/upload_server.o
 
@@ -1406,6 +1430,9 @@ help:
 	@echo "... src/ros2_manager.o"
 	@echo "... src/ros2_manager.i"
 	@echo "... src/ros2_manager.s"
+	@echo "... src/ros2_metrics_collector.o"
+	@echo "... src/ros2_metrics_collector.i"
+	@echo "... src/ros2_metrics_collector.s"
 	@echo "... src/server/upload_server.o"
 	@echo "... src/server/upload_server.i"
 	@echo "... src/server/upload_server.s"

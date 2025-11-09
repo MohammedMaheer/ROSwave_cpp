@@ -56,6 +56,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o.d"
+  "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o"
+  "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o"

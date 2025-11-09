@@ -1181,6 +1181,12 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/ros2_metrics_collector.hpp",
+			"MU",
+			"6YEA5652QU/moc_ros2_metrics_collector.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/session_manager.hpp",
 			"MU",
 			"6YEA5652QU/moc_session_manager.cpp",
@@ -1413,6 +1419,11 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp",
 			"MU",
 			null
 		],

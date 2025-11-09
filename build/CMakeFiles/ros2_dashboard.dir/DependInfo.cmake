@@ -35,6 +35,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/network_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/network_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/network_manager.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/process_guard.cpp" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/session_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/topic_monitor.cpp" "CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o.d"
   )

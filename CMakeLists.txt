@@ -77,6 +77,8 @@ set(SOURCES
     src/logging.cpp
     src/alert_manager_advanced.cpp
     src/advanced_chart_features.cpp
+    src/plugin_loader.cpp
+    src/plugin_registry.cpp
 )
 
 set(HEADERS
@@ -112,6 +114,9 @@ set(HEADERS
     include/gui/ui_improvements.hpp
     include/alert_manager_advanced.hpp
     include/advanced_chart_features.hpp
+    include/plugin_interface.hpp
+    include/plugin_loader.hpp
+    include/plugin_registry.hpp
 )
 
 # Main executable
@@ -153,6 +158,24 @@ target_link_libraries(ros2_verify_performance
     rclcpp::rclcpp
     nlohmann_json::nlohmann_json
 )
+
+# ===== Plugin System =====
+# Build plugin library (optional)
+add_library(ros2_dashboard_plugins SHARED src/plugins/custom_visualizer_plugin.cpp)
+
+target_link_libraries(ros2_dashboard_plugins
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+)
+
+target_compile_options(ros2_dashboard_plugins PRIVATE -fPIC -Wall -Wextra)
+
+# Install plugin library to plugins directory
+install(TARGETS ros2_dashboard_plugins
+    LIBRARY DESTINATION lib/ros2_dashboard/plugins
+)
+
 
 # ===== ASAN/UBSAN Build Targets =====
 # Build with AddressSanitizer: cmake -DCMAKE_BUILD_TYPE=ASAN ..

@@ -237,6 +237,19 @@ ros2_verify_performance/fast:
 .PHONY : ros2_verify_performance/fast
 
 #=============================================================================
+# Target rules for targets named ros2_dashboard_plugins
+
+# Build rule for target.
+ros2_dashboard_plugins: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros2_dashboard_plugins
+.PHONY : ros2_dashboard_plugins
+
+# fast build rule for target.
+ros2_dashboard_plugins/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/build
+.PHONY : ros2_dashboard_plugins/fast
+
+#=============================================================================
 # Target rules for targets named test_containers
 
 # Build rule for target.
@@ -328,6 +341,19 @@ ros2_verify_performance_autogen/fast:
 .PHONY : ros2_verify_performance_autogen/fast
 
 #=============================================================================
+# Target rules for targets named ros2_dashboard_plugins_autogen
+
+# Build rule for target.
+ros2_dashboard_plugins_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros2_dashboard_plugins_autogen
+.PHONY : ros2_dashboard_plugins_autogen
+
+# fast build rule for target.
+ros2_dashboard_plugins_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins_autogen.dir/build.make CMakeFiles/ros2_dashboard_plugins_autogen.dir/build
+.PHONY : ros2_dashboard_plugins_autogen/fast
+
+#=============================================================================
 # Target rules for targets named test_containers_autogen
 
 # Build rule for target.
@@ -402,6 +428,30 @@ ros2_dashboard_autogen/mocs_compilation.s: ros2_dashboard_autogen/mocs_compilati
 ros2_dashboard_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.s
 .PHONY : ros2_dashboard_autogen/mocs_compilation.cpp.s
+
+ros2_dashboard_plugins_autogen/mocs_compilation.o: ros2_dashboard_plugins_autogen/mocs_compilation.cpp.o
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.o
+
+# target to build an object file
+ros2_dashboard_plugins_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/ros2_dashboard_plugins_autogen/mocs_compilation.cpp.o
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.cpp.o
+
+ros2_dashboard_plugins_autogen/mocs_compilation.i: ros2_dashboard_plugins_autogen/mocs_compilation.cpp.i
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+ros2_dashboard_plugins_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/ros2_dashboard_plugins_autogen/mocs_compilation.cpp.i
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.cpp.i
+
+ros2_dashboard_plugins_autogen/mocs_compilation.s: ros2_dashboard_plugins_autogen/mocs_compilation.cpp.s
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+ros2_dashboard_plugins_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/ros2_dashboard_plugins_autogen/mocs_compilation.cpp.s
+.PHONY : ros2_dashboard_plugins_autogen/mocs_compilation.cpp.s
 
 ros2_upload_server_autogen/mocs_compilation.o: ros2_upload_server_autogen/mocs_compilation.cpp.o
 .PHONY : ros2_upload_server_autogen/mocs_compilation.o
@@ -1084,6 +1134,78 @@ src/network_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/network_manager.cpp.s
 .PHONY : src/network_manager.cpp.s
 
+src/plugin_loader.o: src/plugin_loader.cpp.o
+.PHONY : src/plugin_loader.o
+
+# target to build an object file
+src/plugin_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o
+.PHONY : src/plugin_loader.cpp.o
+
+src/plugin_loader.i: src/plugin_loader.cpp.i
+.PHONY : src/plugin_loader.i
+
+# target to preprocess a source file
+src/plugin_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.i
+.PHONY : src/plugin_loader.cpp.i
+
+src/plugin_loader.s: src/plugin_loader.cpp.s
+.PHONY : src/plugin_loader.s
+
+# target to generate assembly for a file
+src/plugin_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.s
+.PHONY : src/plugin_loader.cpp.s
+
+src/plugin_registry.o: src/plugin_registry.cpp.o
+.PHONY : src/plugin_registry.o
+
+# target to build an object file
+src/plugin_registry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o
+.PHONY : src/plugin_registry.cpp.o
+
+src/plugin_registry.i: src/plugin_registry.cpp.i
+.PHONY : src/plugin_registry.i
+
+# target to preprocess a source file
+src/plugin_registry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.i
+.PHONY : src/plugin_registry.cpp.i
+
+src/plugin_registry.s: src/plugin_registry.cpp.s
+.PHONY : src/plugin_registry.s
+
+# target to generate assembly for a file
+src/plugin_registry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.s
+.PHONY : src/plugin_registry.cpp.s
+
+src/plugins/custom_visualizer_plugin.o: src/plugins/custom_visualizer_plugin.cpp.o
+.PHONY : src/plugins/custom_visualizer_plugin.o
+
+# target to build an object file
+src/plugins/custom_visualizer_plugin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/src/plugins/custom_visualizer_plugin.cpp.o
+.PHONY : src/plugins/custom_visualizer_plugin.cpp.o
+
+src/plugins/custom_visualizer_plugin.i: src/plugins/custom_visualizer_plugin.cpp.i
+.PHONY : src/plugins/custom_visualizer_plugin.i
+
+# target to preprocess a source file
+src/plugins/custom_visualizer_plugin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/src/plugins/custom_visualizer_plugin.cpp.i
+.PHONY : src/plugins/custom_visualizer_plugin.cpp.i
+
+src/plugins/custom_visualizer_plugin.s: src/plugins/custom_visualizer_plugin.cpp.s
+.PHONY : src/plugins/custom_visualizer_plugin.s
+
+# target to generate assembly for a file
+src/plugins/custom_visualizer_plugin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard_plugins.dir/build.make CMakeFiles/ros2_dashboard_plugins.dir/src/plugins/custom_visualizer_plugin.cpp.s
+.PHONY : src/plugins/custom_visualizer_plugin.cpp.s
+
 src/process_guard.o: src/process_guard.cpp.o
 .PHONY : src/process_guard.o
 
@@ -1458,6 +1580,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ros2_dashboard_autogen"
+	@echo "... ros2_dashboard_plugins_autogen"
 	@echo "... ros2_dashboard_uninstall"
 	@echo "... ros2_upload_server_autogen"
 	@echo "... ros2_verify_performance_autogen"
@@ -1467,6 +1590,7 @@ help:
 	@echo "... test_logging_autogen"
 	@echo "... uninstall"
 	@echo "... ros2_dashboard"
+	@echo "... ros2_dashboard_plugins"
 	@echo "... ros2_upload_server"
 	@echo "... ros2_verify_performance"
 	@echo "... test_advanced_features"
@@ -1476,6 +1600,9 @@ help:
 	@echo "... ros2_dashboard_autogen/mocs_compilation.o"
 	@echo "... ros2_dashboard_autogen/mocs_compilation.i"
 	@echo "... ros2_dashboard_autogen/mocs_compilation.s"
+	@echo "... ros2_dashboard_plugins_autogen/mocs_compilation.o"
+	@echo "... ros2_dashboard_plugins_autogen/mocs_compilation.i"
+	@echo "... ros2_dashboard_plugins_autogen/mocs_compilation.s"
 	@echo "... ros2_upload_server_autogen/mocs_compilation.o"
 	@echo "... ros2_upload_server_autogen/mocs_compilation.i"
 	@echo "... ros2_upload_server_autogen/mocs_compilation.s"
@@ -1560,6 +1687,15 @@ help:
 	@echo "... src/network_manager.o"
 	@echo "... src/network_manager.i"
 	@echo "... src/network_manager.s"
+	@echo "... src/plugin_loader.o"
+	@echo "... src/plugin_loader.i"
+	@echo "... src/plugin_loader.s"
+	@echo "... src/plugin_registry.o"
+	@echo "... src/plugin_registry.i"
+	@echo "... src/plugin_registry.s"
+	@echo "... src/plugins/custom_visualizer_plugin.o"
+	@echo "... src/plugins/custom_visualizer_plugin.i"
+	@echo "... src/plugins/custom_visualizer_plugin.s"
 	@echo "... src/process_guard.o"
 	@echo "... src/process_guard.i"
 	@echo "... src/process_guard.s"

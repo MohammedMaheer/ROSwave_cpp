@@ -517,6 +517,34 @@ CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/advanced_chart_features.cpp -o CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s
 
+CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
+CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o: ../src/plugin_loader.cpp
+CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_loader.cpp
+
+CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_loader.cpp > CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.i
+
+CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_loader.cpp -o CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.s
+
+CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o: CMakeFiles/ros2_dashboard.dir/flags.make
+CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o: ../src/plugin_registry.cpp
+CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o: CMakeFiles/ros2_dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o -MF CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o.d -o CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o -c /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_registry.cpp
+
+CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_registry.cpp > CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.i
+
+CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_registry.cpp -o CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.s
+
 # Object files for target ros2_dashboard
 ros2_dashboard_OBJECTS = \
 "CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o" \
@@ -550,7 +578,9 @@ ros2_dashboard_OBJECTS = \
 "CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o" \
 "CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o" \
-"CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o"
+"CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o" \
+"CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o" \
+"CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o"
 
 # External object files for target ros2_dashboard
 ros2_dashboard_EXTERNAL_OBJECTS =
@@ -587,6 +617,8 @@ ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/gui/context_menus.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/logging.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o
+ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o
+ros2_dashboard: CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/build.make
 ros2_dashboard: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 ros2_dashboard: /usr/lib/x86_64-linux-gnu/libQt5Concurrent.so.5.15.3
@@ -657,7 +689,7 @@ ros2_dashboard: /opt/ros/humble/lib/librosidl_runtime_c.so
 ros2_dashboard: /opt/ros/humble/lib/librcutils.so
 ros2_dashboard: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 ros2_dashboard: CMakeFiles/ros2_dashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable ros2_dashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable ros2_dashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros2_dashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -35,6 +35,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/metrics_history_buffer.cpp" "CMakeFiles/ros2_dashboard.dir/src/metrics_history_buffer.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/metrics_history_buffer.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ml_exporter.cpp" "CMakeFiles/ros2_dashboard.dir/src/ml_exporter.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ml_exporter.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/network_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/network_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/network_manager.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_loader.cpp" "CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/plugin_loader.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/plugin_registry.cpp" "CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/plugin_registry.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/process_guard.cpp" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o.d"

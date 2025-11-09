@@ -72,6 +72,7 @@ set(SOURCES
     src/gui/advanced_chart_widget.cpp
     src/gui/advanced_filter.cpp
     src/gui/topic_dependency_graph.cpp
+    src/gui/context_menus.cpp
 )
 
 set(HEADERS
@@ -99,6 +100,7 @@ set(HEADERS
     include/gui/advanced_chart_widget.hpp
     include/gui/advanced_filter.hpp
     include/gui/topic_dependency_graph.hpp
+    include/gui/context_menus.hpp
     include/adaptive_cache_layer.hpp
     include/performance_optimizations.hpp
     include/gui/ui_improvements.hpp

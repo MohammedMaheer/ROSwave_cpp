@@ -1253,6 +1253,9 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: ros
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QClipboard \
   ros2_dashboard_autogen/BMPI5EA7AM/moc_upload_tab.cpp \
   ../include/gui/upload_tab.hpp \
+  ros2_dashboard_autogen/6YEA5652QU/moc_keyboard_shortcuts_manager.cpp \
+  ../include/keyboard_shortcuts_manager.hpp \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeySequence \
   ros2_dashboard_autogen/6YEA5652QU/moc_session_manager.cpp \
   ../include/session_manager.hpp \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings \
@@ -12680,6 +12683,10 @@ CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o: ../src/topic_monitor.cpp 
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
 
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileselector.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h:
@@ -14086,10 +14093,6 @@ ros2_dashboard_autogen/BMPI5EA7AM/moc_advanced_chart_widget.cpp:
 
 /usr/include/nlohmann/detail/iterators/iterator_traits.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
-
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qreadwritelock.h:
@@ -14264,9 +14267,9 @@ ros2_dashboard_autogen/BMPI5EA7AM/moc_settings_dialog.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qgenericpluginfactory.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/xsaveintrin.h:
-
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xsaveintrin.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
 
@@ -14503,8 +14506,6 @@ ros2_dashboard_autogen/BMPI5EA7AM/moc_settings_dialog.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicstransform.h:
-
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h:
 
@@ -14754,6 +14755,8 @@ ros2_dashboard_autogen/BMPI5EA7AM/moc_recording_tab.cpp:
 
 /usr/include/c++/11/bits/istream.tcc:
 
+../include/keyboard_shortcuts_manager.hpp:
+
 /usr/include/c++/11/bits/slice_array.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
@@ -14836,6 +14839,18 @@ ros2_dashboard_autogen/BMPI5EA7AM/moc_topics_tab.cpp:
 
 ../include/gui/upload_tab.hpp:
 
+ros2_dashboard_autogen/6YEA5652QU/moc_keyboard_shortcuts_manager.cpp:
+
+../src/main.cpp:
+
+../src/gui/settings_dialog.cpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QKeySequence:
+
 ros2_dashboard_autogen/6YEA5652QU/moc_session_manager.cpp:
 
 ../src/alert_manager.cpp:
@@ -14892,10 +14907,6 @@ ros2_dashboard_autogen/6YEA5652QU/moc_session_manager.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
-../src/main.cpp:
-
-../src/gui/settings_dialog.cpp:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
@@ -14921,5 +14932,3 @@ ros2_dashboard_autogen/6YEA5652QU/moc_session_manager.cpp:
 /usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/linux/posix_types.h:
-
-/usr/include/asm-generic/posix_types.h:

@@ -335,10 +335,39 @@ class KeyboardShortcutsManager : public QObject {
     Q_OBJECT
 
 public:
-    struct Shortcut {
+    /**
+     * @brief Shortcut action enumeration
+     */
+    enum class ShortcutAction {
+        // View
+        TOGGLE_SIDEBAR, TOGGLE_FULLSCREEN, ZOOM_IN, ZOOM_OUT, FIT_WINDOW,
+        // Navigation
+        NEXT_TAB, PREV_TAB, FOCUS_SEARCH, OPEN_TOPICS_TAB,
+        // Control
+        PLAY_PAUSE, STOP, STEP_FORWARD, JUMP_START, JUMP_END,
+        // Topic management
+        SELECT_ALL_TOPICS, DESELECT_ALL_TOPICS, DELETE_TOPIC, FIND_TOPIC,
+        // Recording
+        START_RECORDING, STOP_RECORDING, EXPORT_RECORDING,
+        // Export
+        EXPORT_CSV, EXPORT_JSON, COPY_SELECTION, SELECT_ALL,
+        // Settings
+        OPEN_PREFERENCES, OPEN_SETTINGS, RELOAD_CONFIG,
+        // Help
+        OPEN_HELP, SHOW_SHORTCUTS, SHOW_ABOUT,
+        // Debug
+        SHOW_CONSOLE, RELOAD_PLUGINS,
+        COUNT
+    };
+
+    struct ShortcutEntry {
+        ShortcutAction action;
+        QString name;
         QString key_sequence;
         QString description;
-        std::function<void()> action;
+        std::function<void()> callback;
+        bool enabled = true;
+        bool customizable = true;
     };
 
     static KeyboardShortcutsManager& instance() {
@@ -346,13 +375,144 @@ public:
         return instance_;
     }
 
+    /**
+     * @brief Register a custom shortcut
+     */
     void register_shortcut(const QString& sequence, const QString& description,
                          std::function<void()> action) {
         auto shortcut = new QShortcut(QKeySequence(sequence), qApp->activeWindow());
         connect(shortcut, &QShortcut::activated, this,
                 [action]() { action(); });
 
-        shortcuts_.push_back({sequence, description, action});
+        shortcuts_.push_back({ShortcutAction::COUNT, "Custom", sequence, description, action});
+    }
+
+    /**
+     * @brief Register action shortcut
+     */
+    void register_action_shortcut(ShortcutAction action, const QString& name,
+                                 const QString& sequence, const QString& description,
+                                 std::function<void()> callback) {
+        shortcuts_.push_back({action, name, sequence, description, callback});
+    }
+
+    /**
+     * @brief Customize a shortcut sequence
+     */
+    bool customize_shortcut(ShortcutAction action, const QString& new_sequence) {
+        for (auto& sc : shortcuts_) {
+            if (sc.action == action && sc.customizable) {
+                sc.key_sequence = new_sequence;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @brief Get shortcut by action
+     */
+    ShortcutEntry* get_shortcut(ShortcutAction action) {
+        for (auto& sc : shortcuts_) {
+            if (sc.action == action) {
+                return &sc;
+            }
+        }
+        return nullptr;
+    }
+
+    /**
+     * @brief Load shortcuts from settings
+     */
+    void load_from_settings() {
+        QSettings settings("ROSwave", "ROSwave");
+        settings.beginGroup("Shortcuts");
+        
+        for (auto& sc : shortcuts_) {
+            QString key = QString::number(static_cast<int>(sc.action));
+            QString saved = settings.value(key, sc.key_sequence).toString();
+            if (!saved.isEmpty()) {
+                sc.key_sequence = saved;
+            }
+        }
+        
+        settings.endGroup();
+    }
+
+    /**
+     * @brief Save shortcuts to settings
+     */
+    void save_to_settings() const {
+        QSettings settings("ROSwave", "ROSwave");
+        settings.beginGroup("Shortcuts");
+        
+        for (const auto& sc : shortcuts_) {
+            QString key = QString::number(static_cast<int>(sc.action));
+            settings.setValue(key, sc.key_sequence);
+        }
+        
+        settings.endGroup();
+        settings.sync();
+    }
+
+    /**
+     * @brief Check for conflicting shortcuts
+     */
+    QList<QPair<QString, QString>> find_conflicts() const {
+        QList<QPair<QString, QString>> conflicts;
+        
+        for (size_t i = 0; i < shortcuts_.size(); ++i) {
+            for (size_t j = i + 1; j < shortcuts_.size(); ++j) {
+                if (shortcuts_[i].key_sequence == shortcuts_[j].key_sequence &&
+                    !shortcuts_[i].key_sequence.isEmpty() &&
+                    shortcuts_[i].enabled && shortcuts_[j].enabled) {
+                    conflicts.append({shortcuts_[i].name, shortcuts_[j].name});
+                }
+            }
+        }
+        
+        return conflicts;
+    }
+
+    /**
+     * @brief Export shortcuts as JSON
+     */
+    QString export_as_json() const {
+        QJsonObject root;
+        QJsonArray arr;
+        
+        for (const auto& sc : shortcuts_) {
+            QJsonObject obj;
+            obj["action"] = static_cast<int>(sc.action);
+            obj["name"] = sc.name;
+            obj["sequence"] = sc.key_sequence;
+            obj["description"] = sc.description;
+            obj["enabled"] = sc.enabled;
+            arr.append(obj);
+        }
+        
+        root["shortcuts"] = arr;
+        return QString::fromUtf8(QJsonDocument(root).toJson());
+    }
+
+    /**
+     * @brief Import shortcuts from JSON
+     */
+    bool import_from_json(const QString& json_str) {
+        QJsonDocument doc = QJsonDocument::fromJson(json_str.toUtf8());
+        if (!doc.isObject()) return false;
+        
+        QJsonArray arr = doc.object()["shortcuts"].toArray();
+        for (const auto& item : arr) {
+            QJsonObject obj = item.toObject();
+            int action_id = obj["action"].toInt();
+            if (action_id >= 0 && action_id < static_cast<int>(ShortcutAction::COUNT)) {
+                customize_shortcut(static_cast<ShortcutAction>(action_id),
+                                 obj["sequence"].toString());
+            }
+        }
+        
+        return true;
     }
 
     void setup_dashboard_shortcuts(QMainWindow* main_window) {
@@ -381,35 +541,78 @@ public:
         // Help
         new QShortcut(Qt::CTRL + Qt::Key_Question, main_window,
                      SLOT(show_keyboard_shortcuts()));
+        
+        load_from_settings();
     }
 
     void show_shortcuts_dialog(QWidget* parent) {
         QDialog dialog(parent);
         dialog.setWindowTitle("Keyboard Shortcuts");
-        dialog.setMinimumSize(500, 400);
+        dialog.setMinimumSize(600, 500);
 
         auto layout = new QVBoxLayout(&dialog);
+        
+        // Search box
+        auto search_layout = new QHBoxLayout;
+        auto search_label = new QLabel("Search:");
+        auto search_input = new QLineEdit;
+        search_layout->addWidget(search_label);
+        search_layout->addWidget(search_input, 1);
+        layout->addLayout(search_layout);
+
+        // Table
         auto table = new QTableWidget;
-        table->setColumnCount(2);
-        table->setHorizontalHeaderLabels({"Shortcut", "Action"});
+        table->setColumnCount(3);
+        table->setHorizontalHeaderLabels({"Action", "Shortcut", "Description"});
         table->horizontalHeader()->setStretchLastSection(true);
+        table->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         int row = 0;
         for (const auto& sc : shortcuts_) {
             table->insertRow(row);
-            table->setItem(row, 0, new QTableWidgetItem(sc.key_sequence));
-            table->setItem(row, 1, new QTableWidgetItem(sc.description));
+            table->setItem(row, 0, new QTableWidgetItem(sc.name));
+            table->setItem(row, 1, new QTableWidgetItem(sc.key_sequence));
+            table->setItem(row, 2, new QTableWidgetItem(sc.description));
             row++;
         }
 
         layout->addWidget(table);
 
+        // Search functionality
+        connect(search_input, &QLineEdit::textChanged, [table](const QString& text) {
+            for (int i = 0; i < table->rowCount(); ++i) {
+                bool matches = text.isEmpty() ||
+                    table->item(i, 0)->text().contains(text, Qt::CaseInsensitive) ||
+                    table->item(i, 1)->text().contains(text, Qt::CaseInsensitive) ||
+                    table->item(i, 2)->text().contains(text, Qt::CaseInsensitive);
+                table->setRowHidden(i, !matches);
+            }
+        });
+
+        // Buttons
+        auto btn_layout = new QHBoxLayout;
+        QPushButton reset_btn("Reset to Defaults");
         QPushButton close_btn("Close");
+        
+        connect(&reset_btn, &QPushButton::clicked, [this]() {
+            for (auto& sc : shortcuts_) {
+                // Reset to defaults would be implemented here
+            }
+        });
+        
         connect(&close_btn, &QPushButton::clicked, &dialog, &QDialog::accept);
-        layout->addWidget(&close_btn);
+        
+        btn_layout->addWidget(&reset_btn);
+        btn_layout->addStretch();
+        btn_layout->addWidget(&close_btn);
+        layout->addLayout(btn_layout);
 
         dialog.exec();
     }
+
+signals:
+    void shortcut_triggered(ShortcutAction action);
+    void shortcut_customized(ShortcutAction action, const QString& new_sequence);
 
 private slots:
     // Dummy slots for shortcuts
@@ -424,7 +627,7 @@ private slots:
     void show_keyboard_shortcuts() {}
 
 private:
-    std::vector<Shortcut> shortcuts_;
+    std::vector<ShortcutEntry> shortcuts_;
 };
 
 // ============================================================================

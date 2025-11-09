@@ -97,6 +97,7 @@ set(HEADERS
     include/gui/message_inspector_tab.hpp
     include/gui/advanced_chart_widget.hpp
     include/gui/advanced_filter.hpp
+    include/adaptive_cache_layer.hpp
     include/performance_optimizations.hpp
     include/gui/ui_improvements.hpp
 )

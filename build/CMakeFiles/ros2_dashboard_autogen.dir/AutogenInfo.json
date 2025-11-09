@@ -1019,6 +1019,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/adaptive_cache_layer.hpp",
+			"MU",
+			"6YEA5652QU/moc_adaptive_cache_layer.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager.hpp",
 			"MU",
 			"6YEA5652QU/moc_alert_manager.cpp",

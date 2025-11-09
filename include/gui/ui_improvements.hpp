@@ -13,6 +13,19 @@
 #include <QShortcut>
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
+#include <QLineEdit>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QPainter>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QDialog>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QApplication>
+#include <QClipboard>
 #include <memory>
 
 // ============================================================================
@@ -248,6 +261,8 @@ signals:
 // ============================================================================
 
 class TopicContextMenu : public QMenu {
+    Q_OBJECT
+
 public:
     TopicContextMenu(const QString& topic_name, QWidget* parent = nullptr)
         : QMenu(parent) {
@@ -255,11 +270,11 @@ public:
         setWindowTitle(QString("Topic: %1").arg(topic_name));
 
         // Copy actions
-        addAction("📋 Copy Name", [topic_name]() {
+        addAction("📋 Copy Name", [this, topic_name]() {
             QApplication::clipboard()->setText(topic_name);
         });
 
-        addAction("📋 Copy Full Type", [topic_name]() {
+        addAction("📋 Copy Full Type", [this, topic_name]() {
             // Get full type and copy
             QString full_type = get_topic_full_type(topic_name);
             QApplication::clipboard()->setText(full_type);
@@ -268,26 +283,26 @@ public:
         addSeparator();
 
         // Topic operations
-        addAction("👁️ Subscribe (Inspector)", [topic_name]() {
+        addAction("👁️ Subscribe (Inspector)", [this, topic_name]() {
             emit subscribe_to_topic(topic_name);
         });
 
-        addAction("⏺️ Record This Topic", [topic_name]() {
+        addAction("⏺️ Record This Topic", [this, topic_name]() {
             emit record_topic(topic_name);
         });
 
-        addAction("📊 Add to Monitoring", [topic_name]() {
+        addAction("📊 Add to Monitoring", [this, topic_name]() {
             emit add_to_monitoring(topic_name);
         });
 
         addSeparator();
 
         // Information
-        addAction("ℹ️ View Message Definition", [topic_name]() {
+        addAction("ℹ️ View Message Definition", [this, topic_name]() {
             show_message_definition(topic_name);
         });
 
-        addAction("📈 View Statistics", [topic_name]() {
+        addAction("📈 View Statistics", [this, topic_name]() {
             show_topic_statistics(topic_name);
         });
     }
@@ -317,6 +332,8 @@ private:
 // ============================================================================
 
 class KeyboardShortcutsManager : public QObject {
+    Q_OBJECT
+
 public:
     struct Shortcut {
         QString key_sequence;
@@ -393,6 +410,18 @@ public:
 
         dialog.exec();
     }
+
+private slots:
+    // Dummy slots for shortcuts
+    void focus_topics_tab() {}
+    void focus_nodes_tab() {}
+    void focus_services_tab() {}
+    void refresh_all() {}
+    void focus_search() {}
+    void export_data() {}
+    void toggle_theme() {}
+    void toggle_recording() {}
+    void show_keyboard_shortcuts() {}
 
 private:
     std::vector<Shortcut> shortcuts_;

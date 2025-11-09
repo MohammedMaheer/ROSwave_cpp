@@ -373,6 +373,30 @@ ros2_verify_performance_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_verify_performance.dir/build.make CMakeFiles/ros2_verify_performance.dir/ros2_verify_performance_autogen/mocs_compilation.cpp.s
 .PHONY : ros2_verify_performance_autogen/mocs_compilation.cpp.s
 
+src/alert_manager.o: src/alert_manager.cpp.o
+.PHONY : src/alert_manager.o
+
+# target to build an object file
+src/alert_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.o
+.PHONY : src/alert_manager.cpp.o
+
+src/alert_manager.i: src/alert_manager.cpp.i
+.PHONY : src/alert_manager.i
+
+# target to preprocess a source file
+src/alert_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.i
+.PHONY : src/alert_manager.cpp.i
+
+src/alert_manager.s: src/alert_manager.cpp.s
+.PHONY : src/alert_manager.s
+
+# target to generate assembly for a file
+src/alert_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager.cpp.s
+.PHONY : src/alert_manager.cpp.s
+
 src/async_worker.o: src/async_worker.cpp.o
 .PHONY : src/async_worker.o
 
@@ -444,6 +468,30 @@ src/gui/main_window.s: src/gui/main_window.cpp.s
 src/gui/main_window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.s
 .PHONY : src/gui/main_window.cpp.s
+
+src/gui/message_inspector_tab.o: src/gui/message_inspector_tab.cpp.o
+.PHONY : src/gui/message_inspector_tab.o
+
+# target to build an object file
+src/gui/message_inspector_tab.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.o
+.PHONY : src/gui/message_inspector_tab.cpp.o
+
+src/gui/message_inspector_tab.i: src/gui/message_inspector_tab.cpp.i
+.PHONY : src/gui/message_inspector_tab.i
+
+# target to preprocess a source file
+src/gui/message_inspector_tab.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.i
+.PHONY : src/gui/message_inspector_tab.cpp.i
+
+src/gui/message_inspector_tab.s: src/gui/message_inspector_tab.cpp.s
+.PHONY : src/gui/message_inspector_tab.s
+
+# target to generate assembly for a file
+src/gui/message_inspector_tab.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/message_inspector_tab.cpp.s
+.PHONY : src/gui/message_inspector_tab.cpp.s
 
 src/gui/metrics_tab.o: src/gui/metrics_tab.cpp.o
 .PHONY : src/gui/metrics_tab.o
@@ -856,6 +904,30 @@ src/server/upload_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_upload_server.dir/build.make CMakeFiles/ros2_upload_server.dir/src/server/upload_server.cpp.s
 .PHONY : src/server/upload_server.cpp.s
 
+src/session_manager.o: src/session_manager.cpp.o
+.PHONY : src/session_manager.o
+
+# target to build an object file
+src/session_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o
+.PHONY : src/session_manager.cpp.o
+
+src/session_manager.i: src/session_manager.cpp.i
+.PHONY : src/session_manager.i
+
+# target to preprocess a source file
+src/session_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.i
+.PHONY : src/session_manager.cpp.i
+
+src/session_manager.s: src/session_manager.cpp.s
+.PHONY : src/session_manager.s
+
+# target to generate assembly for a file
+src/session_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.s
+.PHONY : src/session_manager.cpp.s
+
 src/tools/verify_performance.o: src/tools/verify_performance.cpp.o
 .PHONY : src/tools/verify_performance.o
 
@@ -984,6 +1056,9 @@ help:
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.o"
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.i"
 	@echo "... ros2_verify_performance_autogen/mocs_compilation.s"
+	@echo "... src/alert_manager.o"
+	@echo "... src/alert_manager.i"
+	@echo "... src/alert_manager.s"
 	@echo "... src/async_worker.o"
 	@echo "... src/async_worker.i"
 	@echo "... src/async_worker.s"
@@ -993,6 +1068,9 @@ help:
 	@echo "... src/gui/main_window.o"
 	@echo "... src/gui/main_window.i"
 	@echo "... src/gui/main_window.s"
+	@echo "... src/gui/message_inspector_tab.o"
+	@echo "... src/gui/message_inspector_tab.i"
+	@echo "... src/gui/message_inspector_tab.s"
 	@echo "... src/gui/metrics_tab.o"
 	@echo "... src/gui/metrics_tab.i"
 	@echo "... src/gui/metrics_tab.s"
@@ -1044,6 +1122,9 @@ help:
 	@echo "... src/server/upload_server.o"
 	@echo "... src/server/upload_server.i"
 	@echo "... src/server/upload_server.s"
+	@echo "... src/session_manager.o"
+	@echo "... src/session_manager.i"
+	@echo "... src/session_manager.s"
 	@echo "... src/tools/verify_performance.o"
 	@echo "... src/tools/verify_performance.i"
 	@echo "... src/tools/verify_performance.s"

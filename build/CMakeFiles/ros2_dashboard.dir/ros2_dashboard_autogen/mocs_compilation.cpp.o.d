@@ -1,7 +1,7 @@
 CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_export_tab.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/6YEA5652QU/moc_alert_manager.cpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -118,11 +118,11 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/export_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/6YEA5652QU/../../../include/alert_manager.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
  /usr/include/c++/11/cstddef /usr/include/assert.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
@@ -171,13 +171,7 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
@@ -255,6 +249,24 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
+ /usr/include/c++/11/mutex /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/unique_lock.h \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_export_tab.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/export_tab.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
@@ -276,8 +288,6 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
@@ -341,8 +351,6 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/ml_exporter.hpp \
  /usr/include/c++/11/optional \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/ros2_manager.hpp \
- /usr/include/c++/11/mutex /usr/include/c++/11/bits/std_mutex.h \
- /usr/include/c++/11/bits/unique_lock.h \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/async_worker.hpp \
  /usr/include/c++/11/future /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/bits/atomic_futex.h \
@@ -364,47 +372,23 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_collector.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/network_manager.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/topic_monitor.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_metrics_tab.cpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/metrics_tab.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_history_buffer.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
- /usr/include/c++/11/cstring /usr/include/qcustomplot.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedPointer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPaintEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QWheelEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMultiMap \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QCache \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcache.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_message_inspector_tab.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/message_inspector_tab.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
+ /usr/include/nlohmann/json.hpp /usr/include/nlohmann/adl_serializer.hpp \
+ /usr/include/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/valarray \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -427,6 +411,113 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/c++/11/bits/valarray_array.h \
+ /usr/include/c++/11/bits/valarray_array.tcc \
+ /usr/include/c++/11/bits/valarray_before.h \
+ /usr/include/c++/11/bits/slice_array.h \
+ /usr/include/c++/11/bits/valarray_after.h \
+ /usr/include/c++/11/bits/gslice.h \
+ /usr/include/c++/11/bits/gslice_array.h \
+ /usr/include/c++/11/bits/mask_array.h \
+ /usr/include/c++/11/bits/indirect_array.h \
+ /usr/include/nlohmann/detail/exceptions.hpp \
+ /usr/include/nlohmann/detail/value_t.hpp \
+ /usr/include/nlohmann/detail/string_escape.hpp \
+ /usr/include/nlohmann/detail/macro_scope.hpp \
+ /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /usr/include/nlohmann/detail/meta/detected.hpp \
+ /usr/include/nlohmann/detail/meta/void_t.hpp /usr/include/c++/11/cassert \
+ /usr/include/nlohmann/detail/input/position_t.hpp \
+ /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+ /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+ /usr/include/nlohmann/detail/meta/type_traits.hpp \
+ /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+ /usr/include/nlohmann/json_fwd.hpp /usr/include/c++/11/filesystem \
+ /usr/include/c++/11/bits/fs_fwd.h /usr/include/c++/11/bits/fs_path.h \
+ /usr/include/c++/11/locale /usr/include/c++/11/bits/locale_facets.h \
+ /usr/include/c++/11/cwctype /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
+ /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
+ /usr/include/nlohmann/detail/conversions/to_json.hpp \
+ /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /usr/include/nlohmann/byte_container_with_subtype.hpp \
+ /usr/include/nlohmann/detail/hash.hpp \
+ /usr/include/nlohmann/detail/input/binary_reader.hpp \
+ /usr/include/c++/11/cstring \
+ /usr/include/nlohmann/detail/input/input_adapters.hpp \
+ /usr/include/nlohmann/detail/input/json_sax.hpp \
+ /usr/include/nlohmann/detail/input/lexer.hpp \
+ /usr/include/nlohmann/detail/meta/is_sax.hpp \
+ /usr/include/nlohmann/detail/input/parser.hpp \
+ /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /usr/include/nlohmann/detail/json_pointer.hpp \
+ /usr/include/nlohmann/detail/json_ref.hpp \
+ /usr/include/nlohmann/detail/output/binary_writer.hpp \
+ /usr/include/nlohmann/detail/output/output_adapters.hpp \
+ /usr/include/nlohmann/detail/output/serializer.hpp \
+ /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+ /usr/include/nlohmann/ordered_map.hpp \
+ /usr/include/nlohmann/detail/macro_unscope.hpp \
+ /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_metrics_tab.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/metrics_tab.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_history_buffer.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
+ /usr/include/qcustomplot.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPaintEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QWheelEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMultiMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QCache \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtNumeric \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
@@ -901,12 +992,10 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolordialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolormap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcommandlinkbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcommonstyle.h \
@@ -997,7 +1086,6 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizegrip.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplashscreen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedlayout.h \
@@ -1012,10 +1100,7 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsystemtrayicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h \
@@ -1049,15 +1134,11 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qtprintsupportversion.h \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_network_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/network_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_nodes_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/nodes_tab.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeWidget \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_recording_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/recording_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_selected_topics_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/selected_topics_tab.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_services_tab.cpp \
@@ -1070,6 +1151,26 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_topics_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/topics_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_ui_improvements.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/ui_improvements.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPropertyAnimation \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsOpacityEffect \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QShortcut \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSortFilterProxyModel \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QClipboard \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_upload_tab.cpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/upload_tab.hpp
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/upload_tab.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/6YEA5652QU/moc_session_manager.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/6YEA5652QU/../../../include/session_manager.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QByteArray

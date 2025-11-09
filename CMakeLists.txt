@@ -55,6 +55,8 @@ set(SOURCES
     src/async_worker.cpp
     src/topic_monitor.cpp
     src/process_guard.cpp
+    src/alert_manager.cpp
+    src/session_manager.cpp
     src/gui/main_window.cpp
     src/gui/topics_tab.cpp
     src/gui/nodes_tab.cpp
@@ -66,6 +68,7 @@ set(SOURCES
     src/gui/network_tab.cpp
     src/gui/upload_tab.cpp
     src/gui/settings_dialog.cpp
+    src/gui/message_inspector_tab.cpp
 )
 
 set(HEADERS
@@ -76,6 +79,8 @@ set(HEADERS
     include/ml_exporter.hpp
     include/async_worker.hpp
     include/topic_monitor.hpp
+    include/alert_manager.hpp
+    include/session_manager.hpp
     include/gui/main_window.hpp
     include/gui/topics_tab.hpp
     include/gui/nodes_tab.hpp
@@ -87,6 +92,9 @@ set(HEADERS
     include/gui/network_tab.hpp
     include/gui/upload_tab.hpp
     include/gui/settings_dialog.hpp
+    include/gui/message_inspector_tab.hpp
+    include/performance_optimizations.hpp
+    include/gui/ui_improvements.hpp
 )
 
 # Main executable

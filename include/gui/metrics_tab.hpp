@@ -9,11 +9,13 @@
 #include <QWidget>
 #include <QLabel>
 #include <QTimer>
+#include <QListWidget>
 #include <memory>
 #include "metrics_collector.hpp"
 #include "metrics_history_buffer.hpp"
 #include "async_worker.hpp"
 #include "../ros2_metrics_collector.hpp"
+#include "alert_manager_advanced.hpp"
 
 #ifdef HAVE_QCUSTOMPLOT
     #include "qcustomplot.h"
@@ -45,6 +47,11 @@ public:
                    std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_collector = nullptr);
 
     void refresh_metrics();
+    
+    /**
+     * @brief Get the alert manager instance
+     */
+    std::shared_ptr<AlertManager> get_alert_manager() const { return alert_manager_; }
 
 private slots:
     void on_export_csv_clicked();
@@ -52,12 +59,13 @@ private slots:
     void on_export_chart_clicked();
     void on_refresh_history_clicked();
     void on_update_timer_timeout();
+    void on_alert_received_(const Alert& alert);
 
 private:
     std::shared_ptr<MetricsCollector> metrics_collector_;
     std::shared_ptr<AsyncWorker> async_worker_;
-    std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_metrics_collector_;
     std::unique_ptr<MetricsHistoryBuffer> history_buffer_;
+    std::shared_ptr<AlertManager> alert_manager_;
     QTimer* metrics_refresh_timer_;
 
     // Chart widgets (if QCustomPlot available)
@@ -89,6 +97,13 @@ private:
     QLabel* node_count_label_;
     QLabel* service_count_label_;
     QLabel* messages_per_sec_label_;
+
+    // Alert UI
+    QListWidget* alerts_list_;
+    QLabel* alerts_status_label_;
+    
+    // ROS2 collector (declared after all labels for proper initialization order)
+    std::shared_ptr<ros2_dashboard::ROS2MetricsCollector> ros2_metrics_collector_;
 
     // UI container for scrolling
     class QScrollArea* scroll_area_;

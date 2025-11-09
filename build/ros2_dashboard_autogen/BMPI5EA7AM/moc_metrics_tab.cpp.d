@@ -1,5 +1,6 @@
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_metrics_tab.cpp: /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/metrics_tab.hpp \
   /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/moc_predefs.h \
+  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
   /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/async_worker.hpp \
   /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
   /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_collector.hpp \
@@ -652,6 +653,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCommonStyle \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollerProperties \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QtWidgets \

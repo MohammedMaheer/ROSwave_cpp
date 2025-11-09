@@ -290,6 +290,30 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/c++/11/variant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_collector.hpp \
  /usr/include/c++/11/mutex /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
@@ -304,6 +328,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/this_thread_sleep.h \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/../ros2_metrics_collector.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
  /usr/include/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
@@ -319,10 +344,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPaintEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/11/variant \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
@@ -345,7 +366,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
@@ -390,7 +410,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractproxymodel.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractstate.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracttransition.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -413,7 +432,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcbormap.h \
@@ -706,7 +724,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QRect \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurface.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbitmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qclipboard.h \
@@ -842,19 +859,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
@@ -879,7 +884,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolormap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcommandlinkbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
@@ -946,8 +950,6 @@ CMakeFiles/ros2_dashboard.dir/src/gui/metrics_tab.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlcdnumber.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmdiarea.h \

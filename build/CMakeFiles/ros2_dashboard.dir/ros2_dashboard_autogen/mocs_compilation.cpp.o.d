@@ -1153,6 +1153,7 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_history_buffer.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/../ros2_metrics_collector.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_network_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/network_tab.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_nodes_tab.cpp \

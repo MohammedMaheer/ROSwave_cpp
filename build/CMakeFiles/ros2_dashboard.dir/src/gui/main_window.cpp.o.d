@@ -368,6 +368,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
  /usr/include/c++/11/cstring \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/../ros2_metrics_collector.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
  /usr/include/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \

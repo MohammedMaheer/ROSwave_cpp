@@ -61,6 +61,17 @@ void MetricsTab::initialize(std::shared_ptr<MetricsCollector> metrics_collector,
     async_worker_ = async_worker;
     ros2_metrics_collector_ = ros2_collector;
     
+    // Initialize AlertManager
+    alert_manager_ = std::make_shared<AlertManager>();
+    
+    // Set up callback when alerts are raised
+    alert_manager_->on_alert([this](const Alert& alert) {
+        // Use Qt's signal/slot mechanism for thread-safe UI updates
+        QMetaObject::invokeMethod(this, [this, alert]() {
+            on_alert_received_(alert);
+        }, Qt::QueuedConnection);
+    });
+    
     // Setup auto-refresh timer
     metrics_refresh_timer_ = new QTimer(this);
     connect(metrics_refresh_timer_, &QTimer::timeout, this, &MetricsTab::on_update_timer_timeout);
@@ -231,6 +242,26 @@ void MetricsTab::create_ui_() {
     main_layout->addWidget(ros2_charts_group);
 #endif
 
+    // ===== Alerts Display Section =====
+    auto alerts_group = new QGroupBox("Active Alerts");
+    auto alerts_layout = new QVBoxLayout();
+    
+    alerts_status_label_ = new QLabel("Active Alerts: 0 Critical, 0 Warning");
+    alerts_status_label_->setStyleSheet("QLabel { color: green; font-weight: bold; }");
+    alerts_layout->addWidget(alerts_status_label_);
+    
+    alerts_list_ = new QListWidget();
+    alerts_list_->setMaximumHeight(150);
+    alerts_list_->setStyleSheet(
+        "QListWidget { background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px; }"
+        "QListWidget::item { padding: 4px; }"
+        "QListWidget::item:selected { background-color: #e0e0e0; }"
+    );
+    alerts_layout->addWidget(alerts_list_);
+    
+    alerts_group->setLayout(alerts_layout);
+    main_layout->addWidget(alerts_group);
+
     // ===== Export Buttons (Bottom Section) =====
     auto export_layout = new QHBoxLayout();
     auto export_csv_btn = new QPushButton("Export CSV");
@@ -314,6 +345,50 @@ void MetricsTab::update_metrics_display_() {
         node_count_label_->setText(QString::asprintf("Nodes: %u", ros2.total_nodes));
         service_count_label_->setText(QString::asprintf("Services: %u", ros2.total_services));
         messages_per_sec_label_->setText(QString::asprintf("Msg/s: %llu", (unsigned long long)ros2.total_messages_per_sec));
+    }
+
+    // Check system metrics against alert thresholds
+    if (alert_manager_) {
+        // Get current timestamp in milliseconds
+        auto now = std::chrono::system_clock::now();
+        auto duration = now.time_since_epoch();
+        uint64_t timestamp_ms = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+        
+        // Check CPU threshold (default: 80%)
+        if (sys.cpu_usage_percent > 80.0) {
+            alert_manager_->raise_alert(Alert{
+                AlertType::TOPIC_HIGH_RATE,  // Reuse existing enum
+                AlertSeverity::WARNING,
+                "system_cpu",
+                QString::asprintf("High CPU usage: %.1f%%", sys.cpu_usage_percent).toStdString(),
+                timestamp_ms,
+                "MetricsTab"
+            });
+        }
+        
+        // Check memory threshold: if memory > 2GB, alert (approximate high memory)
+        if (sys.memory_usage_mb > 2048) {
+            alert_manager_->raise_alert(Alert{
+                AlertType::TOPIC_HIGH_RATE,
+                AlertSeverity::WARNING,
+                "system_memory",
+                QString::asprintf("High memory usage: %ld MB", sys.memory_usage_mb).toStdString(),
+                timestamp_ms,
+                "MetricsTab"
+            });
+        }
+        
+        // Check temperature threshold (default: 85C)
+        if (sys.temperature_celsius > 85) {
+            alert_manager_->raise_alert(Alert{
+                AlertType::TOPIC_HIGH_RATE,
+                AlertSeverity::CRITICAL,
+                "system_thermal",
+                QString::asprintf("High temperature: %dC", sys.temperature_celsius).toStdString(),
+                timestamp_ms,
+                "MetricsTab"
+            });
+        }
     }
 
     // Update charts
@@ -470,6 +545,67 @@ void MetricsTab::on_maximize_button_clicked() {
             } else {
                 window->showMaximized();
             }
+        }
+    }
+}
+
+void MetricsTab::on_alert_received_(const Alert& alert) {
+    if (!alerts_list_) return;
+    
+    // Create visual representation of alert
+    QString severity_icon;
+    QString severity_color;
+    switch (alert.severity) {
+        case AlertSeverity::INFO:
+            severity_icon = "ℹ️";
+            severity_color = "blue";
+            break;
+        case AlertSeverity::WARNING:
+            severity_icon = "⚠️";
+            severity_color = "orange";
+            break;
+        case AlertSeverity::CRITICAL:
+            severity_icon = "🔴";
+            severity_color = "red";
+            break;
+    }
+    
+    // Format alert text
+    QString alert_text = QString::fromStdString(
+        severity_icon.toStdString() + " [" + alert.component + "] " + alert.message
+    );
+    
+    // Add to list
+    alerts_list_->insertItem(0, alert_text);
+    
+    // Keep only last 50 alerts
+    while (alerts_list_->count() > 50) {
+        delete alerts_list_->takeItem(alerts_list_->count() - 1);
+    }
+    
+    // Update alert status label
+    auto active_alerts = alert_manager_->get_active_alerts();
+    int critical_count = 0, warning_count = 0;
+    
+    for (const auto& a : active_alerts) {
+        if (a.severity == AlertSeverity::CRITICAL) critical_count++;
+        else if (a.severity == AlertSeverity::WARNING) warning_count++;
+    }
+    
+    QString status_text = QString::asprintf(
+        "Active Alerts: %d Critical, %d Warning", critical_count, warning_count
+    );
+    
+    if (alerts_status_label_) {
+        alerts_status_label_->setText(status_text);
+        
+        // Color code the status label
+        if (critical_count > 0) {
+            alerts_status_label_->setStyleSheet("QLabel { color: red; font-weight: bold; }");
+        } else if (warning_count > 0) {
+            alerts_status_label_->setStyleSheet("QLabel { color: orange; font-weight: bold; }");
+        } else {
+            alerts_status_label_->setStyleSheet("QLabel { color: green; }");
         }
     }
 }

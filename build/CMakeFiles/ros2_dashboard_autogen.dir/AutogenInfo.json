@@ -1109,6 +1109,12 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/topic_dependency_graph.hpp",
+			"MU",
+			"BMPI5EA7AM/moc_topic_dependency_graph.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/topics_tab.hpp",
 			"MU",
 			"BMPI5EA7AM/moc_topics_tab.cpp",
@@ -1335,6 +1341,11 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/settings_dialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/topic_dependency_graph.cpp",
 			"MU",
 			null
 		],

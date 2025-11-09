@@ -12,6 +12,7 @@
 #include "BMPI5EA7AM/moc_selected_topics_tab.cpp"
 #include "BMPI5EA7AM/moc_services_tab.cpp"
 #include "BMPI5EA7AM/moc_settings_dialog.cpp"
+#include "BMPI5EA7AM/moc_topic_dependency_graph.cpp"
 #include "BMPI5EA7AM/moc_topics_tab.cpp"
 #include "BMPI5EA7AM/moc_ui_improvements.cpp"
 #include "BMPI5EA7AM/moc_upload_tab.cpp"

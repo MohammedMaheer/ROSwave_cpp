@@ -32,6 +32,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o.d"
+  "CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o"
+  "CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o"
   "CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o.d"
   "CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o"

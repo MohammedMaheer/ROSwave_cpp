@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/selected_topics_tab.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/selected_topics_tab.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/services_tab.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/services_tab.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/settings_dialog.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/topic_dependency_graph.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/topics_tab.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/topics_tab.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/upload_tab.cpp" "CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/gui/upload_tab.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/main.cpp" "CMakeFiles/ros2_dashboard.dir/src/main.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/main.cpp.o.d"

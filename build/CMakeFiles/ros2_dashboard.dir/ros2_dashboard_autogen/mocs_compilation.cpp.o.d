@@ -1160,6 +1160,10 @@ CMakeFiles/ros2_dashboard.dir/ros2_dashboard_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_topic_dependency_graph.cpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/topic_dependency_graph.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_topics_tab.cpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/../../../include/gui/topics_tab.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_dashboard_autogen/BMPI5EA7AM/moc_ui_improvements.cpp \

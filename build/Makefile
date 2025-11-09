@@ -709,6 +709,30 @@ src/gui/settings_dialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/settings_dialog.cpp.s
 .PHONY : src/gui/settings_dialog.cpp.s
 
+src/gui/topic_dependency_graph.o: src/gui/topic_dependency_graph.cpp.o
+.PHONY : src/gui/topic_dependency_graph.o
+
+# target to build an object file
+src/gui/topic_dependency_graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.o
+.PHONY : src/gui/topic_dependency_graph.cpp.o
+
+src/gui/topic_dependency_graph.i: src/gui/topic_dependency_graph.cpp.i
+.PHONY : src/gui/topic_dependency_graph.i
+
+# target to preprocess a source file
+src/gui/topic_dependency_graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.i
+.PHONY : src/gui/topic_dependency_graph.cpp.i
+
+src/gui/topic_dependency_graph.s: src/gui/topic_dependency_graph.cpp.s
+.PHONY : src/gui/topic_dependency_graph.s
+
+# target to generate assembly for a file
+src/gui/topic_dependency_graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/topic_dependency_graph.cpp.s
+.PHONY : src/gui/topic_dependency_graph.cpp.s
+
 src/gui/topics_tab.o: src/gui/topics_tab.cpp.o
 .PHONY : src/gui/topics_tab.o
 
@@ -1146,6 +1170,9 @@ help:
 	@echo "... src/gui/settings_dialog.o"
 	@echo "... src/gui/settings_dialog.i"
 	@echo "... src/gui/settings_dialog.s"
+	@echo "... src/gui/topic_dependency_graph.o"
+	@echo "... src/gui/topic_dependency_graph.i"
+	@echo "... src/gui/topic_dependency_graph.s"
 	@echo "... src/gui/topics_tab.o"
 	@echo "... src/gui/topics_tab.i"
 	@echo "... src/gui/topics_tab.s"

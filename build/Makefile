@@ -421,6 +421,54 @@ src/async_worker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/async_worker.cpp.s
 .PHONY : src/async_worker.cpp.s
 
+src/gui/advanced_chart_widget.o: src/gui/advanced_chart_widget.cpp.o
+.PHONY : src/gui/advanced_chart_widget.o
+
+# target to build an object file
+src/gui/advanced_chart_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.o
+.PHONY : src/gui/advanced_chart_widget.cpp.o
+
+src/gui/advanced_chart_widget.i: src/gui/advanced_chart_widget.cpp.i
+.PHONY : src/gui/advanced_chart_widget.i
+
+# target to preprocess a source file
+src/gui/advanced_chart_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.i
+.PHONY : src/gui/advanced_chart_widget.cpp.i
+
+src/gui/advanced_chart_widget.s: src/gui/advanced_chart_widget.cpp.s
+.PHONY : src/gui/advanced_chart_widget.s
+
+# target to generate assembly for a file
+src/gui/advanced_chart_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_chart_widget.cpp.s
+.PHONY : src/gui/advanced_chart_widget.cpp.s
+
+src/gui/advanced_filter.o: src/gui/advanced_filter.cpp.o
+.PHONY : src/gui/advanced_filter.o
+
+# target to build an object file
+src/gui/advanced_filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.o
+.PHONY : src/gui/advanced_filter.cpp.o
+
+src/gui/advanced_filter.i: src/gui/advanced_filter.cpp.i
+.PHONY : src/gui/advanced_filter.i
+
+# target to preprocess a source file
+src/gui/advanced_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.i
+.PHONY : src/gui/advanced_filter.cpp.i
+
+src/gui/advanced_filter.s: src/gui/advanced_filter.cpp.s
+.PHONY : src/gui/advanced_filter.s
+
+# target to generate assembly for a file
+src/gui/advanced_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/gui/advanced_filter.cpp.s
+.PHONY : src/gui/advanced_filter.cpp.s
+
 src/gui/export_tab.o: src/gui/export_tab.cpp.o
 .PHONY : src/gui/export_tab.o
 
@@ -1062,6 +1110,12 @@ help:
 	@echo "... src/async_worker.o"
 	@echo "... src/async_worker.i"
 	@echo "... src/async_worker.s"
+	@echo "... src/gui/advanced_chart_widget.o"
+	@echo "... src/gui/advanced_chart_widget.i"
+	@echo "... src/gui/advanced_chart_widget.s"
+	@echo "... src/gui/advanced_filter.o"
+	@echo "... src/gui/advanced_filter.i"
+	@echo "... src/gui/advanced_filter.s"
 	@echo "... src/gui/export_tab.o"
 	@echo "... src/gui/export_tab.i"
 	@echo "... src/gui/export_tab.s"

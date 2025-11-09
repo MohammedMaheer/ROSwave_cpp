@@ -1031,6 +1031,18 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/advanced_chart_widget.hpp",
+			"MU",
+			"BMPI5EA7AM/moc_advanced_chart_widget.cpp",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/advanced_filter.hpp",
+			"MU",
+			"BMPI5EA7AM/moc_advanced_filter.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/export_tab.hpp",
 			"MU",
 			"BMPI5EA7AM/moc_export_tab.cpp",
@@ -1257,6 +1269,16 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/async_worker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_chart_widget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/gui/advanced_filter.cpp",
 			"MU",
 			null
 		],

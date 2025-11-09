@@ -69,6 +69,8 @@ set(SOURCES
     src/gui/upload_tab.cpp
     src/gui/settings_dialog.cpp
     src/gui/message_inspector_tab.cpp
+    src/gui/advanced_chart_widget.cpp
+    src/gui/advanced_filter.cpp
 )
 
 set(HEADERS
@@ -93,6 +95,8 @@ set(HEADERS
     include/gui/upload_tab.hpp
     include/gui/settings_dialog.hpp
     include/gui/message_inspector_tab.hpp
+    include/gui/advanced_chart_widget.hpp
+    include/gui/advanced_filter.hpp
     include/performance_optimizations.hpp
     include/gui/ui_improvements.hpp
 )

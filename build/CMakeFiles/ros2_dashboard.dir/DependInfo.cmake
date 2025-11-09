@@ -40,6 +40,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/process_guard.cpp" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/process_guard.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_manager.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/api_routes.cpp" "CMakeFiles/ros2_dashboard.dir/src/server/api_routes.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/server/api_routes.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/rest_api_server.cpp" "CMakeFiles/ros2_dashboard.dir/src/server/rest_api_server.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/server/rest_api_server.cpp.o.d"
+  "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/websocket_server.cpp" "CMakeFiles/ros2_dashboard.dir/src/server/websocket_server.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/server/websocket_server.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/session_manager.cpp" "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/session_manager.cpp.o.d"
   "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/topic_monitor.cpp" "CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o" "gcc" "CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.o.d"
   )

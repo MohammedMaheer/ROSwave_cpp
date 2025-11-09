@@ -1278,6 +1278,54 @@ src/ros2_metrics_collector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/ros2_metrics_collector.cpp.s
 .PHONY : src/ros2_metrics_collector.cpp.s
 
+src/server/api_routes.o: src/server/api_routes.cpp.o
+.PHONY : src/server/api_routes.o
+
+# target to build an object file
+src/server/api_routes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/api_routes.cpp.o
+.PHONY : src/server/api_routes.cpp.o
+
+src/server/api_routes.i: src/server/api_routes.cpp.i
+.PHONY : src/server/api_routes.i
+
+# target to preprocess a source file
+src/server/api_routes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/api_routes.cpp.i
+.PHONY : src/server/api_routes.cpp.i
+
+src/server/api_routes.s: src/server/api_routes.cpp.s
+.PHONY : src/server/api_routes.s
+
+# target to generate assembly for a file
+src/server/api_routes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/api_routes.cpp.s
+.PHONY : src/server/api_routes.cpp.s
+
+src/server/rest_api_server.o: src/server/rest_api_server.cpp.o
+.PHONY : src/server/rest_api_server.o
+
+# target to build an object file
+src/server/rest_api_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/rest_api_server.cpp.o
+.PHONY : src/server/rest_api_server.cpp.o
+
+src/server/rest_api_server.i: src/server/rest_api_server.cpp.i
+.PHONY : src/server/rest_api_server.i
+
+# target to preprocess a source file
+src/server/rest_api_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/rest_api_server.cpp.i
+.PHONY : src/server/rest_api_server.cpp.i
+
+src/server/rest_api_server.s: src/server/rest_api_server.cpp.s
+.PHONY : src/server/rest_api_server.s
+
+# target to generate assembly for a file
+src/server/rest_api_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/rest_api_server.cpp.s
+.PHONY : src/server/rest_api_server.cpp.s
+
 src/server/upload_server.o: src/server/upload_server.cpp.o
 .PHONY : src/server/upload_server.o
 
@@ -1301,6 +1349,30 @@ src/server/upload_server.s: src/server/upload_server.cpp.s
 src/server/upload_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_upload_server.dir/build.make CMakeFiles/ros2_upload_server.dir/src/server/upload_server.cpp.s
 .PHONY : src/server/upload_server.cpp.s
+
+src/server/websocket_server.o: src/server/websocket_server.cpp.o
+.PHONY : src/server/websocket_server.o
+
+# target to build an object file
+src/server/websocket_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/websocket_server.cpp.o
+.PHONY : src/server/websocket_server.cpp.o
+
+src/server/websocket_server.i: src/server/websocket_server.cpp.i
+.PHONY : src/server/websocket_server.i
+
+# target to preprocess a source file
+src/server/websocket_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/websocket_server.cpp.i
+.PHONY : src/server/websocket_server.cpp.i
+
+src/server/websocket_server.s: src/server/websocket_server.cpp.s
+.PHONY : src/server/websocket_server.s
+
+# target to generate assembly for a file
+src/server/websocket_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/server/websocket_server.cpp.s
+.PHONY : src/server/websocket_server.cpp.s
 
 src/session_manager.o: src/session_manager.cpp.o
 .PHONY : src/session_manager.o
@@ -1705,9 +1777,18 @@ help:
 	@echo "... src/ros2_metrics_collector.o"
 	@echo "... src/ros2_metrics_collector.i"
 	@echo "... src/ros2_metrics_collector.s"
+	@echo "... src/server/api_routes.o"
+	@echo "... src/server/api_routes.i"
+	@echo "... src/server/api_routes.s"
+	@echo "... src/server/rest_api_server.o"
+	@echo "... src/server/rest_api_server.i"
+	@echo "... src/server/rest_api_server.s"
 	@echo "... src/server/upload_server.o"
 	@echo "... src/server/upload_server.i"
 	@echo "... src/server/upload_server.s"
+	@echo "... src/server/websocket_server.o"
+	@echo "... src/server/websocket_server.i"
+	@echo "... src/server/websocket_server.s"
 	@echo "... src/session_manager.o"
 	@echo "... src/session_manager.i"
 	@echo "... src/session_manager.s"

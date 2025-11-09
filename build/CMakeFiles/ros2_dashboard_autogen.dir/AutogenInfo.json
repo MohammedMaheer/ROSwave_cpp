@@ -1217,6 +1217,24 @@
 			null
 		],
 		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/server/api_routes.hpp",
+			"MU",
+			"RONUJLQUN3/moc_api_routes.cpp",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/server/rest_api_server.hpp",
+			"MU",
+			"RONUJLQUN3/moc_rest_api_server.cpp",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/server/websocket_server.hpp",
+			"MU",
+			"RONUJLQUN3/moc_websocket_server.cpp",
+			null
+		],
+		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/session_manager.hpp",
 			"MU",
 			"6YEA5652QU/moc_session_manager.cpp",
@@ -1474,6 +1492,21 @@
 		],
 		[
 			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/ros2_metrics_collector.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/api_routes.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/rest_api_server.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/maahir/Desktop/cpp_ros2_live_status_dashboard/src/server/websocket_server.cpp",
 			"MU",
 			null
 		],

@@ -79,6 +79,9 @@ set(SOURCES
     src/advanced_chart_features.cpp
     src/plugin_loader.cpp
     src/plugin_registry.cpp
+    src/server/rest_api_server.cpp
+    src/server/websocket_server.cpp
+    src/server/api_routes.cpp
 )
 
 set(HEADERS
@@ -117,6 +120,9 @@ set(HEADERS
     include/plugin_interface.hpp
     include/plugin_loader.hpp
     include/plugin_registry.hpp
+    include/server/rest_api_server.hpp
+    include/server/websocket_server.hpp
+    include/server/api_routes.hpp
 )
 
 # Main executable

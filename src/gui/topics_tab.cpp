@@ -13,6 +13,7 @@
 #include <QPushButton>
 #include <QTimer>
 #include <QTextEdit>
+#include <QTabWidget>
 #include <iostream>
 
 namespace ros2_dashboard::gui {
@@ -88,6 +89,7 @@ void TopicsTab::on_refresh_button_clicked() {
 void TopicsTab::on_topics_updated_slot(const std::vector<ros2_dashboard::TopicInfo>& topics) {
     // This is called from the main Qt thread - safe to update UI
     update_topics_table(topics);
+    update_dependency_graph(topics);
 }
 
 void TopicsTab::on_message_updated_slot(const QString& message) {
@@ -114,8 +116,15 @@ void TopicsTab::create_ui_() {
     
     main_layout->addLayout(top_layout);
     
+    // Create tab widget for Topics List and Dependency Graph
+    auto tab_widget = new QTabWidget();
+    
+    // ===== TAB 1: Topics List & Message Preview =====
+    auto list_container = new QWidget();
+    auto list_layout = new QVBoxLayout();
+    
     // Create splitter for topics table and message preview
-    auto splitter = new QSplitter(Qt::Vertical, this);
+    auto splitter = new QSplitter(Qt::Vertical);
     
     // Topics table
     topics_table_ = new QTableWidget();
@@ -164,7 +173,16 @@ void TopicsTab::create_ui_() {
     splitter->setStretchFactor(0, 2);
     splitter->setStretchFactor(1, 1);
     
-    main_layout->addWidget(splitter);
+    list_layout->addWidget(splitter);
+    list_container->setLayout(list_layout);
+    tab_widget->addTab(list_container, "📋 Topics List");
+    
+    // ===== TAB 2: Topic Dependency Graph =====
+    dependency_graph_ = new TopicDependencyGraph();
+    dependency_graph_->setStyleSheet("QCustomPlot { border: 1px solid #ccc; }");
+    tab_widget->addTab(dependency_graph_, "🔗 Dependency Graph");
+    
+    main_layout->addWidget(tab_widget);
     
     setLayout(main_layout);
 }
@@ -200,6 +218,35 @@ void TopicsTab::update_topics_table(const std::vector<ros2_dashboard::TopicInfo>
     }
     
     total_topics_label_->setText(QString::number(topics.size()));
+}
+
+void TopicsTab::update_dependency_graph(const std::vector<ros2_dashboard::TopicInfo>& topics) {
+    if (!dependency_graph_) return;
+    
+    // Clear and rebuild graph
+    dependency_graph_->clear_graph();
+    
+    // Extract topic names
+    std::vector<QString> topic_names;
+    for (const auto& topic : topics) {
+        topic_names.push_back(QString::fromStdString(topic.name));
+    }
+    
+    // Build graph from topics (simplified - just show topics as nodes)
+    // In a real system, would connect to ros2_manager to get node info
+    for (const auto& topic_name : topic_names) {
+        TopicDependencyGraph::GraphNode node;
+        node.id = topic_name;
+        node.label = topic_name;
+        node.type = TopicDependencyGraph::NodeType::TOPIC;
+        dependency_graph_->add_node(node);
+    }
+    
+    // TODO: Add edges between topics based on pub/sub relationships
+    // This would require additional data from ROS2Manager
+    
+    dependency_graph_->update_layout(50);
+    dependency_graph_->refresh();
 }
 
 }  // namespace ros2_dashboard::gui

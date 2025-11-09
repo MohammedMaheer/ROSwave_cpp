@@ -14,6 +14,7 @@
 #include <memory>
 #include "ros2_manager.hpp"
 #include "async_worker.hpp"
+#include "gui/topic_dependency_graph.hpp"
 
 namespace ros2_dashboard::gui {
 
@@ -65,9 +66,11 @@ private:
     QPushButton* refresh_button_;
     QLabel* total_topics_label_;
     class QTimer* refresh_timer_;
+    TopicDependencyGraph* dependency_graph_;
 
     void create_ui_();
     void update_topics_table(const std::vector<ros2_dashboard::TopicInfo>& topics);
+    void update_dependency_graph(const std::vector<ros2_dashboard::TopicInfo>& topics);
 };
 
 }  // namespace ros2_dashboard::gui

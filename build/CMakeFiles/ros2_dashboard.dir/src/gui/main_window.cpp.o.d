@@ -344,31 +344,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/nodes_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidgetitemiterator.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/selected_topics_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/services_tab.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/recording_tab.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/metrics_tab.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_history_buffer.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
- /usr/include/c++/11/cstring \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/../ros2_metrics_collector.hpp \
- /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/topic_dependency_graph.hpp \
  /usr/include/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
@@ -912,10 +888,12 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolordialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolormap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcommandlinkbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcommonstyle.h \
@@ -980,6 +958,9 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qkeysequenceedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlcdnumber.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmdiarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmdisubwindow.h \
@@ -1010,6 +991,7 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizegrip.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplashscreen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedlayout.h \
@@ -1030,6 +1012,9 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtooltip.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidgetitemiterator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidgetitemiterator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundogroup.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundostack.h \
@@ -1053,6 +1038,28 @@ CMakeFiles/ros2_dashboard.dir/src/gui/main_window.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprintpreviewdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprintpreviewwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qtprintsupportversion.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/nodes_tab.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeWidget \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/selected_topics_tab.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/services_tab.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/recording_tab.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/metrics_tab.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/metrics_history_buffer.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/containers/bounded_deque.hpp \
+ /usr/include/c++/11/cstring \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/../ros2_metrics_collector.hpp \
+ /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/alert_manager_advanced.hpp \
  /home/maahir/Desktop/cpp_ros2_live_status_dashboard/include/gui/export_tab.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPlainTextEdit \

@@ -276,6 +276,19 @@ test_context_menus_standalone/fast:
 .PHONY : test_context_menus_standalone/fast
 
 #=============================================================================
+# Target rules for targets named test_advanced_features
+
+# Build rule for target.
+test_advanced_features: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_advanced_features
+.PHONY : test_advanced_features
+
+# fast build rule for target.
+test_advanced_features/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/build
+.PHONY : test_advanced_features/fast
+
+#=============================================================================
 # Target rules for targets named ros2_dashboard_autogen
 
 # Build rule for target.
@@ -352,6 +365,19 @@ test_context_menus_standalone_autogen: cmake_check_build_system
 test_context_menus_standalone_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone_autogen.dir/build.make CMakeFiles/test_context_menus_standalone_autogen.dir/build
 .PHONY : test_context_menus_standalone_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_advanced_features_autogen
+
+# Build rule for target.
+test_advanced_features_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_advanced_features_autogen
+.PHONY : test_advanced_features_autogen
+
+# fast build rule for target.
+test_advanced_features_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features_autogen.dir/build.make CMakeFiles/test_advanced_features_autogen.dir/build
+.PHONY : test_advanced_features_autogen/fast
 
 ros2_dashboard_autogen/mocs_compilation.o: ros2_dashboard_autogen/mocs_compilation.cpp.o
 .PHONY : ros2_dashboard_autogen/mocs_compilation.o
@@ -431,6 +457,7 @@ src/advanced_chart_features.o: src/advanced_chart_features.cpp.o
 # target to build an object file
 src/advanced_chart_features.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/advanced_chart_features.cpp.o
 .PHONY : src/advanced_chart_features.cpp.o
 
 src/advanced_chart_features.i: src/advanced_chart_features.cpp.i
@@ -439,6 +466,7 @@ src/advanced_chart_features.i: src/advanced_chart_features.cpp.i
 # target to preprocess a source file
 src/advanced_chart_features.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/advanced_chart_features.cpp.i
 .PHONY : src/advanced_chart_features.cpp.i
 
 src/advanced_chart_features.s: src/advanced_chart_features.cpp.s
@@ -447,6 +475,7 @@ src/advanced_chart_features.s: src/advanced_chart_features.cpp.s
 # target to generate assembly for a file
 src/advanced_chart_features.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/advanced_chart_features.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/advanced_chart_features.cpp.s
 .PHONY : src/advanced_chart_features.cpp.s
 
 src/alert_manager.o: src/alert_manager.cpp.o
@@ -479,6 +508,7 @@ src/alert_manager_advanced.o: src/alert_manager_advanced.cpp.o
 # target to build an object file
 src/alert_manager_advanced.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/alert_manager_advanced.cpp.o
 .PHONY : src/alert_manager_advanced.cpp.o
 
 src/alert_manager_advanced.i: src/alert_manager_advanced.cpp.i
@@ -487,6 +517,7 @@ src/alert_manager_advanced.i: src/alert_manager_advanced.cpp.i
 # target to preprocess a source file
 src/alert_manager_advanced.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/alert_manager_advanced.cpp.i
 .PHONY : src/alert_manager_advanced.cpp.i
 
 src/alert_manager_advanced.s: src/alert_manager_advanced.cpp.s
@@ -495,6 +526,7 @@ src/alert_manager_advanced.s: src/alert_manager_advanced.cpp.s
 # target to generate assembly for a file
 src/alert_manager_advanced.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/alert_manager_advanced.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/src/alert_manager_advanced.cpp.s
 .PHONY : src/alert_manager_advanced.cpp.s
 
 src/async_worker.o: src/async_worker.cpp.o
@@ -1220,6 +1252,30 @@ src/topic_monitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ros2_dashboard.dir/build.make CMakeFiles/ros2_dashboard.dir/src/topic_monitor.cpp.s
 .PHONY : src/topic_monitor.cpp.s
 
+test_advanced_features_autogen/mocs_compilation.o: test_advanced_features_autogen/mocs_compilation.cpp.o
+.PHONY : test_advanced_features_autogen/mocs_compilation.o
+
+# target to build an object file
+test_advanced_features_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/test_advanced_features_autogen/mocs_compilation.cpp.o
+.PHONY : test_advanced_features_autogen/mocs_compilation.cpp.o
+
+test_advanced_features_autogen/mocs_compilation.i: test_advanced_features_autogen/mocs_compilation.cpp.i
+.PHONY : test_advanced_features_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_advanced_features_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/test_advanced_features_autogen/mocs_compilation.cpp.i
+.PHONY : test_advanced_features_autogen/mocs_compilation.cpp.i
+
+test_advanced_features_autogen/mocs_compilation.s: test_advanced_features_autogen/mocs_compilation.cpp.s
+.PHONY : test_advanced_features_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_advanced_features_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/test_advanced_features_autogen/mocs_compilation.cpp.s
+.PHONY : test_advanced_features_autogen/mocs_compilation.cpp.s
+
 test_containers_autogen/mocs_compilation.o: test_containers_autogen/mocs_compilation.cpp.o
 .PHONY : test_containers_autogen/mocs_compilation.o
 
@@ -1291,6 +1347,30 @@ test_logging_autogen/mocs_compilation.s: test_logging_autogen/mocs_compilation.c
 test_logging_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/test_logging_autogen/mocs_compilation.cpp.s
 .PHONY : test_logging_autogen/mocs_compilation.cpp.s
+
+tests/test_advanced_features.o: tests/test_advanced_features.cpp.o
+.PHONY : tests/test_advanced_features.o
+
+# target to build an object file
+tests/test_advanced_features.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/tests/test_advanced_features.cpp.o
+.PHONY : tests/test_advanced_features.cpp.o
+
+tests/test_advanced_features.i: tests/test_advanced_features.cpp.i
+.PHONY : tests/test_advanced_features.i
+
+# target to preprocess a source file
+tests/test_advanced_features.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/tests/test_advanced_features.cpp.i
+.PHONY : tests/test_advanced_features.cpp.i
+
+tests/test_advanced_features.s: tests/test_advanced_features.cpp.s
+.PHONY : tests/test_advanced_features.s
+
+# target to generate assembly for a file
+tests/test_advanced_features.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/tests/test_advanced_features.cpp.s
+.PHONY : tests/test_advanced_features.cpp.s
 
 tests/test_containers.o: tests/test_containers.cpp.o
 .PHONY : tests/test_containers.o
@@ -1381,6 +1461,7 @@ help:
 	@echo "... ros2_dashboard_uninstall"
 	@echo "... ros2_upload_server_autogen"
 	@echo "... ros2_verify_performance_autogen"
+	@echo "... test_advanced_features_autogen"
 	@echo "... test_containers_autogen"
 	@echo "... test_context_menus_standalone_autogen"
 	@echo "... test_logging_autogen"
@@ -1388,6 +1469,7 @@ help:
 	@echo "... ros2_dashboard"
 	@echo "... ros2_upload_server"
 	@echo "... ros2_verify_performance"
+	@echo "... test_advanced_features"
 	@echo "... test_containers"
 	@echo "... test_context_menus_standalone"
 	@echo "... test_logging"
@@ -1499,6 +1581,9 @@ help:
 	@echo "... src/topic_monitor.o"
 	@echo "... src/topic_monitor.i"
 	@echo "... src/topic_monitor.s"
+	@echo "... test_advanced_features_autogen/mocs_compilation.o"
+	@echo "... test_advanced_features_autogen/mocs_compilation.i"
+	@echo "... test_advanced_features_autogen/mocs_compilation.s"
 	@echo "... test_containers_autogen/mocs_compilation.o"
 	@echo "... test_containers_autogen/mocs_compilation.i"
 	@echo "... test_containers_autogen/mocs_compilation.s"
@@ -1508,6 +1593,9 @@ help:
 	@echo "... test_logging_autogen/mocs_compilation.o"
 	@echo "... test_logging_autogen/mocs_compilation.i"
 	@echo "... test_logging_autogen/mocs_compilation.s"
+	@echo "... tests/test_advanced_features.o"
+	@echo "... tests/test_advanced_features.i"
+	@echo "... tests/test_advanced_features.s"
 	@echo "... tests/test_containers.o"
 	@echo "... tests/test_containers.i"
 	@echo "... tests/test_containers.s"

@@ -213,6 +213,20 @@ add_executable(test_context_menus_standalone tests/test_context_menus_standalone
 target_compile_options(test_context_menus_standalone PRIVATE -O2 -Wall -Wextra)
 add_test(NAME ContextMenusStandaloneTest COMMAND test_context_menus_standalone)
 
+# Advanced features test (Alert Manager, Chart Analytics, Adaptive Cache)
+if(GTest_FOUND)
+    add_executable(test_advanced_features tests/test_advanced_features.cpp 
+                   src/alert_manager_advanced.cpp src/advanced_chart_features.cpp)
+    
+    target_link_libraries(test_advanced_features
+        GTest::GTest
+        GTest::Main
+    )
+    
+    target_compile_options(test_advanced_features PRIVATE -O2 -Wall -Wextra)
+    add_test(NAME AdvancedFeaturesTest COMMAND test_advanced_features)
+endif()
+
 # Installation rules
 install(TARGETS ros2_dashboard ros2_upload_server ros2_verify_performance
     RUNTIME DESTINATION bin

@@ -68,7 +68,7 @@ include CMakeFiles/test_containers_autogen.dir/progress.make
 
 CMakeFiles/test_containers_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target test_containers"
-	/usr/bin/cmake -E cmake_autogen /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_containers_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E cmake_autogen /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_containers_autogen.dir/AutogenInfo.json ""
 
 test_containers_autogen: CMakeFiles/test_containers_autogen
 test_containers_autogen: CMakeFiles/test_containers_autogen.dir/build.make

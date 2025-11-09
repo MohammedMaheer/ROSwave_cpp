@@ -10,3 +10,5 @@ add_test(LoggingTest "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/
 set_tests_properties(LoggingTest PROPERTIES  _BACKTRACE_TRIPLES "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;209;add_test;/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;0;")
 add_test(ContextMenusStandaloneTest "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/test_context_menus_standalone")
 set_tests_properties(ContextMenusStandaloneTest PROPERTIES  _BACKTRACE_TRIPLES "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;214;add_test;/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;0;")
+add_test(AdvancedFeaturesTest "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/test_advanced_features")
+set_tests_properties(AdvancedFeaturesTest PROPERTIES  _BACKTRACE_TRIPLES "/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;227;add_test;/home/maahir/Desktop/cpp_ros2_live_status_dashboard/CMakeLists.txt;0;")

@@ -6,5 +6,5 @@ CXX_DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1 -DQT_CORE_L
 
 CXX_INCLUDES = -I/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/test_containers_autogen/include -I/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 
-CXX_FLAGS = -O3 -DNDEBUG -O2 -Wall -Wextra -DGTEST_HAS_PTHREAD=1 -fPIC -std=gnu++17
+CXX_FLAGS = -O2 -Wall -Wextra -DGTEST_HAS_PTHREAD=1 -fPIC -std=gnu++17
 

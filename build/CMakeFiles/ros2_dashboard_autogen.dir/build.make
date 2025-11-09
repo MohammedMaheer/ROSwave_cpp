@@ -68,7 +68,7 @@ include CMakeFiles/ros2_dashboard_autogen.dir/progress.make
 
 CMakeFiles/ros2_dashboard_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ros2_dashboard"
-	/usr/bin/cmake -E cmake_autogen /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/ros2_dashboard_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E cmake_autogen /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/ros2_dashboard_autogen.dir/AutogenInfo.json ""
 
 ros2_dashboard_autogen: CMakeFiles/ros2_dashboard_autogen
 ros2_dashboard_autogen: CMakeFiles/ros2_dashboard_autogen.dir/build.make

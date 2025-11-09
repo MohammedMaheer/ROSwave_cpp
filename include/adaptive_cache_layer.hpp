@@ -30,6 +30,7 @@ public:
         std::chrono::system_clock::time_point last_accessed;
         size_t access_count = 0;
         std::chrono::milliseconds ttl;
+        size_t size_bytes = 0;  // Track actual size
     };
 
     struct CacheStats {
@@ -84,7 +85,7 @@ public:
         // Remove old entry if exists
         auto it = cache_.find(key);
         if (it != cache_.end()) {
-            current_bytes_ -= it->second.data.size();
+            current_bytes_ -= it->second.size_bytes;
         }
 
         // Evict if necessary
@@ -103,7 +104,8 @@ public:
             now,
             now,
             0,
-            adaptive_ttl
+            adaptive_ttl,
+            size_bytes
         };
         
         current_bytes_ += size_bytes;
@@ -117,7 +119,7 @@ public:
         
         auto it = cache_.find(key);
         if (it != cache_.end()) {
-            current_bytes_ -= it->second.data.size();
+            current_bytes_ -= it->second.size_bytes;
             cache_.erase(it);
         }
     }
@@ -142,7 +144,7 @@ public:
         
         while (it != cache_.end()) {
             if (now - it->second.created_at > it->second.ttl) {
-                current_bytes_ -= it->second.data.size();
+                current_bytes_ -= it->second.size_bytes;
                 it = cache_.erase(it);
                 stats_.evictions++;
             } else {
@@ -192,7 +194,7 @@ private:
             }
         }
         
-        current_bytes_ -= lru_it->second.data.size();
+        current_bytes_ -= lru_it->second.size_bytes;
         cache_.erase(lru_it);
         stats_.evictions++;
     }

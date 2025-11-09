@@ -69,6 +69,7 @@ all: CMakeFiles/ros2_verify_performance.dir/all
 all: CMakeFiles/test_containers.dir/all
 all: CMakeFiles/test_logging.dir/all
 all: CMakeFiles/test_context_menus_standalone.dir/all
+all: CMakeFiles/test_advanced_features.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -84,12 +85,14 @@ clean: CMakeFiles/ros2_verify_performance.dir/clean
 clean: CMakeFiles/test_containers.dir/clean
 clean: CMakeFiles/test_logging.dir/clean
 clean: CMakeFiles/test_context_menus_standalone.dir/clean
+clean: CMakeFiles/test_advanced_features.dir/clean
 clean: CMakeFiles/ros2_dashboard_autogen.dir/clean
 clean: CMakeFiles/ros2_upload_server_autogen.dir/clean
 clean: CMakeFiles/ros2_verify_performance_autogen.dir/clean
 clean: CMakeFiles/test_containers_autogen.dir/clean
 clean: CMakeFiles/test_logging_autogen.dir/clean
 clean: CMakeFiles/test_context_menus_standalone_autogen.dir/clean
+clean: CMakeFiles/test_advanced_features_autogen.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -229,7 +232,7 @@ CMakeFiles/ros2_verify_performance.dir/clean:
 CMakeFiles/test_containers.dir/all: CMakeFiles/test_containers_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers.dir/build.make CMakeFiles/test_containers.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers.dir/build.make CMakeFiles/test_containers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=43,44,45,46 "Built target test_containers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=49,50,51,52 "Built target test_containers"
 .PHONY : CMakeFiles/test_containers.dir/all
 
 # Build rule for subdir invocation for target.
@@ -255,7 +258,7 @@ CMakeFiles/test_containers.dir/clean:
 CMakeFiles/test_logging.dir/all: CMakeFiles/test_logging_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging.dir/build.make CMakeFiles/test_logging.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=52,53,54 "Built target test_logging"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=58,59,60 "Built target test_logging"
 .PHONY : CMakeFiles/test_logging.dir/all
 
 # Build rule for subdir invocation for target.
@@ -281,7 +284,7 @@ CMakeFiles/test_logging.dir/clean:
 CMakeFiles/test_context_menus_standalone.dir/all: CMakeFiles/test_context_menus_standalone_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=48,49,50 "Built target test_context_menus_standalone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=54,55,56 "Built target test_context_menus_standalone"
 .PHONY : CMakeFiles/test_context_menus_standalone.dir/all
 
 # Build rule for subdir invocation for target.
@@ -299,6 +302,32 @@ test_context_menus_standalone: CMakeFiles/test_context_menus_standalone.dir/rule
 CMakeFiles/test_context_menus_standalone.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone.dir/build.make CMakeFiles/test_context_menus_standalone.dir/clean
 .PHONY : CMakeFiles/test_context_menus_standalone.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_advanced_features.dir
+
+# All Build rule for target.
+CMakeFiles/test_advanced_features.dir/all: CMakeFiles/test_advanced_features_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=43,44,45,46,47 "Built target test_advanced_features"
+.PHONY : CMakeFiles/test_advanced_features.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_advanced_features.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_advanced_features.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_advanced_features.dir/rule
+
+# Convenience name for target.
+test_advanced_features: CMakeFiles/test_advanced_features.dir/rule
+.PHONY : test_advanced_features
+
+# clean rule for target.
+CMakeFiles/test_advanced_features.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features.dir/build.make CMakeFiles/test_advanced_features.dir/clean
+.PHONY : CMakeFiles/test_advanced_features.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ros2_dashboard_autogen.dir
@@ -385,7 +414,7 @@ CMakeFiles/ros2_verify_performance_autogen.dir/clean:
 CMakeFiles/test_containers_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers_autogen.dir/build.make CMakeFiles/test_containers_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_containers_autogen.dir/build.make CMakeFiles/test_containers_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=47 "Built target test_containers_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=53 "Built target test_containers_autogen"
 .PHONY : CMakeFiles/test_containers_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -411,7 +440,7 @@ CMakeFiles/test_containers_autogen.dir/clean:
 CMakeFiles/test_logging_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging_autogen.dir/build.make CMakeFiles/test_logging_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logging_autogen.dir/build.make CMakeFiles/test_logging_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=55 "Built target test_logging_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=61 "Built target test_logging_autogen"
 .PHONY : CMakeFiles/test_logging_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -437,7 +466,7 @@ CMakeFiles/test_logging_autogen.dir/clean:
 CMakeFiles/test_context_menus_standalone_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone_autogen.dir/build.make CMakeFiles/test_context_menus_standalone_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone_autogen.dir/build.make CMakeFiles/test_context_menus_standalone_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=51 "Built target test_context_menus_standalone_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=57 "Built target test_context_menus_standalone_autogen"
 .PHONY : CMakeFiles/test_context_menus_standalone_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -455,6 +484,32 @@ test_context_menus_standalone_autogen: CMakeFiles/test_context_menus_standalone_
 CMakeFiles/test_context_menus_standalone_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_context_menus_standalone_autogen.dir/build.make CMakeFiles/test_context_menus_standalone_autogen.dir/clean
 .PHONY : CMakeFiles/test_context_menus_standalone_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_advanced_features_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/test_advanced_features_autogen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features_autogen.dir/build.make CMakeFiles/test_advanced_features_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features_autogen.dir/build.make CMakeFiles/test_advanced_features_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles --progress-num=48 "Built target test_advanced_features_autogen"
+.PHONY : CMakeFiles/test_advanced_features_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_advanced_features_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_advanced_features_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_advanced_features_autogen.dir/rule
+
+# Convenience name for target.
+test_advanced_features_autogen: CMakeFiles/test_advanced_features_autogen.dir/rule
+.PHONY : test_advanced_features_autogen
+
+# clean rule for target.
+CMakeFiles/test_advanced_features_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced_features_autogen.dir/build.make CMakeFiles/test_advanced_features_autogen.dir/clean
+.PHONY : CMakeFiles/test_advanced_features_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,6 +6,7 @@
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_containers.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_logging.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_context_menus_standalone.dir
+/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_advanced_features.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/edit_cache.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/rebuild_cache.dir
@@ -19,3 +20,4 @@
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_containers_autogen.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_logging_autogen.dir
 /home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_context_menus_standalone_autogen.dir
+/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/CMakeFiles/test_advanced_features_autogen.dir

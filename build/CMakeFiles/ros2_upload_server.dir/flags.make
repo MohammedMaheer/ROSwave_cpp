@@ -6,5 +6,5 @@ CXX_DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
 
 CXX_INCLUDES = -I/home/maahir/Desktop/cpp_ros2_live_status_dashboard/build/ros2_upload_server_autogen/include -I/home/maahir/Desktop/cpp_ros2_live_status_dashboard/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 
